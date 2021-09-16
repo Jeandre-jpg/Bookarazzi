@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2400526099364CB4C406B3B1 /* Pods_Bookarazzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */; };
 		3C62366926F3524300FA9D5B /* BookarazziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366826F3524300FA9D5B /* BookarazziApp.swift */; };
 		3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366A26F3524300FA9D5B /* ContentView.swift */; };
 		3C62366D26F3524400FA9D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C62366C26F3524400FA9D5B /* Assets.xcassets */; };
 		3C62367026F3524400FA9D5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C62366F26F3524400FA9D5B /* Preview Assets.xcassets */; };
+		3C62367A26F352F500FA9D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C62367926F352F500FA9D5B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookarazzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62366526F3524300FA9D5B /* Bookarazzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookarazzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62366826F3524300FA9D5B /* BookarazziApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarazziApp.swift; sourceTree = "<group>"; };
 		3C62366A26F3524300FA9D5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C62366C26F3524400FA9D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C62366F26F3524400FA9D5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C62367126F3524400FA9D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C62367926F352F500FA9D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C2E99D2E551EAB7B0A5D4E08 /* Pods-Bookarazzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookarazzi.release.xcconfig"; path = "Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi.release.xcconfig"; sourceTree = "<group>"; };
+		F7644F33BF6AEF79347032FC /* Pods-Bookarazzi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookarazzi.debug.xcconfig"; path = "Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2400526099364CB4C406B3B1 /* Pods_Bookarazzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,8 @@
 			children = (
 				3C62366726F3524300FA9D5B /* Bookarazzi */,
 				3C62366626F3524300FA9D5B /* Products */,
+				9D6FA95A2638453FC3D2B8AC /* Pods */,
+				7011A4B7D8A6B91035254ABB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +64,7 @@
 				3C62366826F3524300FA9D5B /* BookarazziApp.swift */,
 				3C62366A26F3524300FA9D5B /* ContentView.swift */,
 				3C62366C26F3524400FA9D5B /* Assets.xcassets */,
+				3C62367926F352F500FA9D5B /* GoogleService-Info.plist */,
 				3C62367126F3524400FA9D5B /* Info.plist */,
 				3C62366E26F3524400FA9D5B /* Preview Content */,
 			);
@@ -69,6 +79,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7011A4B7D8A6B91035254ABB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D6FA95A2638453FC3D2B8AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7644F33BF6AEF79347032FC /* Pods-Bookarazzi.debug.xcconfig */,
+				C2E99D2E551EAB7B0A5D4E08 /* Pods-Bookarazzi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C62367426F3524400FA9D5B /* Build configuration list for PBXNativeTarget "Bookarazzi" */;
 			buildPhases = (
+				07E1A3FC9B6B414981F667FD /* [CP] Check Pods Manifest.lock */,
 				3C62366126F3524300FA9D5B /* Sources */,
 				3C62366226F3524300FA9D5B /* Frameworks */,
 				3C62366326F3524300FA9D5B /* Resources */,
+				F5BADBD2F5D5CB44DE08010E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +158,53 @@
 			files = (
 				3C62367026F3524400FA9D5B /* Preview Assets.xcassets in Resources */,
 				3C62366D26F3524400FA9D5B /* Assets.xcassets in Resources */,
+				3C62367A26F352F500FA9D5B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07E1A3FC9B6B414981F667FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bookarazzi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5BADBD2F5D5CB44DE08010E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C62366126F3524300FA9D5B /* Sources */ = {
@@ -264,6 +337,7 @@
 		};
 		3C62367526F3524400FA9D5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7644F33BF6AEF79347032FC /* Pods-Bookarazzi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -285,6 +359,7 @@
 		};
 		3C62367626F3524400FA9D5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E99D2E551EAB7B0A5D4E08 /* Pods-Bookarazzi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
