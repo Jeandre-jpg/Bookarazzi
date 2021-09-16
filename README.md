@@ -237,25 +237,11 @@ Then run `swift build` whenever you get prepared.
 
 ### Mockups
 
-<p align="center">
- <img src=""/> 
-</p>
-
-<p align="center">
- <img src=""/> 
-</p>
-
-<p align="center">
- <img src=""/> 
-</p>
 
 ## Concept Process
 
 ### Ideation
 
-<p align="center">
- <img src=""/> 
-</p>
 
 ### Wireframes
 
@@ -276,26 +262,20 @@ Then run `swift build` whenever you get prepared.
 
 ## Design Architecture
 
-<p align="center">
- <img src=""/> 
-</p>
+
 
 ## Unit Tests
-
-<p align="center">
- <img src=""/> 
-</p>
 
 ## Video Demonstration
 
 
 #### Final Video Demonstration:
 
- <a href="">View Demonstration Video</a>
+
 
 #### Promotional Video:
 
-  <a href="">View Promotional Video</a>
+ 
 
 
 #### Download:
@@ -358,8 +338,8 @@ Student Number - 190025
 <br>
 Email - 190025@virtualwindow.co.za
 <br>
-Project Link: [https://github.com/Jeandre-jpg/SV_Database](https://github.com/Jeandre-jpg/Bookarazzi.git)
+Project Link: [https://github.com/Jeandre-jpg/Bookarazzi.git](https://github.com/Jeandre-jpg/Bookarazzi.git)
 
 
 ## Acknowledgements
-1. 
+
