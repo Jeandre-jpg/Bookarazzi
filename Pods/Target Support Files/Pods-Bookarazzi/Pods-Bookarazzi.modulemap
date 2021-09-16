@@ -1,0 +1,6 @@
+framework module Pods_Bookarazzi {
+  umbrella header "Pods-Bookarazzi-umbrella.h"
+
+  export *
+  module * { export * }
+}
