@@ -256,6 +256,12 @@ Then run `swift build` whenever you get prepared.
 <p align="center">
  <img src="https://user-images.githubusercontent.com/55391556/133608446-a72151c6-ee1b-42d5-a7c5-413ffafdf978.png"/> 
 </p>
+
+### ERD Diagram
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/55391556/133997905-62f9836f-8fa8-45e4-8200-a84ee0bf69c0.jpeg"/> 
+</p>
    
 
 ### Implementation
