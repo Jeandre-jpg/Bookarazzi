@@ -3,20 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2400526099364CB4C406B3B1 /* Pods_Bookarazzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */; };
+		3C2765D82703A3790075F51C /* SocialFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2765D72703A3790075F51C /* SocialFeedView.swift */; };
 		3C62366926F3524300FA9D5B /* BookarazziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366826F3524300FA9D5B /* BookarazziApp.swift */; };
 		3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366A26F3524300FA9D5B /* ContentView.swift */; };
 		3C62366D26F3524400FA9D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C62366C26F3524400FA9D5B /* Assets.xcassets */; };
 		3C62367026F3524400FA9D5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C62366F26F3524400FA9D5B /* Preview Assets.xcassets */; };
 		3C62367A26F352F500FA9D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C62367926F352F500FA9D5B /* GoogleService-Info.plist */; };
+		3CDE356B2704909D00AB0D3E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE356A2704909D00AB0D3E /* ProfileView.swift */; };
+		3CDE356D270490D400AB0D3E /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE356C270490D400AB0D3E /* NewPostView.swift */; };
+		3CDE356F2704911400AB0D3E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE356E2704911400AB0D3E /* UserView.swift */; };
+		3CDE35722704916400AB0D3E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE35712704916400AB0D3E /* LoginView.swift */; };
+		3CDE35742704919500AB0D3E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE35732704919500AB0D3E /* SignUpView.swift */; };
+		3CDE3577270491AE00AB0D3E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE3576270491AE00AB0D3E /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookarazzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2765D72703A3790075F51C /* SocialFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedView.swift; sourceTree = "<group>"; };
 		3C62366526F3524300FA9D5B /* Bookarazzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookarazzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62366826F3524300FA9D5B /* BookarazziApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarazziApp.swift; sourceTree = "<group>"; };
 		3C62366A26F3524300FA9D5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		3C62366F26F3524400FA9D5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C62367126F3524400FA9D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C62367926F352F500FA9D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3CDE356A2704909D00AB0D3E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3CDE356C270490D400AB0D3E /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		3CDE356E2704911400AB0D3E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		3CDE35712704916400AB0D3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3CDE35732704919500AB0D3E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3CDE3576270491AE00AB0D3E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C2E99D2E551EAB7B0A5D4E08 /* Pods-Bookarazzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookarazzi.release.xcconfig"; path = "Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi.release.xcconfig"; sourceTree = "<group>"; };
 		F7644F33BF6AEF79347032FC /* Pods-Bookarazzi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookarazzi.debug.xcconfig"; path = "Target Support Files/Pods-Bookarazzi/Pods-Bookarazzi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,9 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2765D62703A3130075F51C /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3C2765D72703A3790075F51C /* SocialFeedView.swift */,
+				3CDE356A2704909D00AB0D3E /* ProfileView.swift */,
+				3CDE356C270490D400AB0D3E /* NewPostView.swift */,
+				3CDE356E2704911400AB0D3E /* UserView.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		3C62365C26F3524300FA9D5B = {
 			isa = PBXGroup;
 			children = (
+				3CDE35752704919D00AB0D3E /* Splash */,
+				3CDE35702704915100AB0D3E /* Sign In & Sign Up */,
+				3C2765D62703A3130075F51C /* SideMenu */,
 				3C62366726F3524300FA9D5B /* Bookarazzi */,
 				3C62366626F3524300FA9D5B /* Products */,
 				9D6FA95A2638453FC3D2B8AC /* Pods */,
@@ -79,6 +107,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3CDE35702704915100AB0D3E /* Sign In & Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE35712704916400AB0D3E /* LoginView.swift */,
+				3CDE35732704919500AB0D3E /* SignUpView.swift */,
+			);
+			path = "Sign In & Sign Up";
+			sourceTree = "<group>";
+		};
+		3CDE35752704919D00AB0D3E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE3576270491AE00AB0D3E /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		7011A4B7D8A6B91035254ABB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +138,6 @@
 				F7644F33BF6AEF79347032FC /* Pods-Bookarazzi.debug.xcconfig */,
 				C2E99D2E551EAB7B0A5D4E08 /* Pods-Bookarazzi.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,8 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDE356B2704909D00AB0D3E /* ProfileView.swift in Sources */,
+				3CDE35722704916400AB0D3E /* LoginView.swift in Sources */,
+				3CDE356F2704911400AB0D3E /* UserView.swift in Sources */,
 				3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */,
+				3CDE35742704919500AB0D3E /* SignUpView.swift in Sources */,
 				3C62366926F3524300FA9D5B /* BookarazziApp.swift in Sources */,
+				3C2765D82703A3790075F51C /* SocialFeedView.swift in Sources */,
+				3CDE356D270490D400AB0D3E /* NewPostView.swift in Sources */,
+				3CDE3577270491AE00AB0D3E /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
