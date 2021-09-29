@@ -12,7 +12,7 @@ struct NewPostView: View {
     var body: some View {
         ZStack {
             
-            Color.ui.yellow.edgesIgnoringSafeArea(
+            Color.ui.beige.edgesIgnoringSafeArea(
                 .all)
             VStack(alignment: .leading) {
                 Button(action: {self.showingMenu.toggle()}) {

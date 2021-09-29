@@ -79,8 +79,11 @@ struct ContentView: View {
 #if DEBUG
 let menuHome = MenuContent(name: "Home", image: "house.fill")
 let menuProfile = MenuContent(name: "Profile", image: "person.fill")
-let menuChat = MenuContent(name: "Chat", image: "message.fill")
-let menuContents = [menuHome, menuProfile, menuChat]
+let menuSocialFeed = MenuContent(name: "Social Feed", image: "message.fill")
+let menuNewPost = MenuContent(name: "New Post", image: "pencil.circle.fill")
+let menuUserView = MenuContent(name: "User View", image: "person.3.fill")
+let menuLogout = MenuContent(name: "Logout", image: "rectangle.portrait.and.arrow.right.fill")
+let menuContents = [menuHome, menuProfile, menuSocialFeed, menuNewPost,menuUserView, menuLogout]
 
 struct ContentView_Previews: PreviewProvider {
     
