@@ -17,7 +17,7 @@ struct LoginView: View {
               ZStack{
                   Color.ui.beige
                       .ignoresSafeArea()
-                      .frame(minWidth: <#T##CGFloat?#>, idealWidth: <#T##CGFloat?#>, maxWidth: <#T##CGFloat?#>, minHeight: <#T##CGFloat?#>, idealHeight: <#T##CGFloat?#>, maxHeight: <#T##CGFloat?#>, alignment: <#T##Alignment#>)
+                      
               VStack(alignment: .leading, spacing: 10){
                   HStack( spacing: 20){
                   Button(action: {
