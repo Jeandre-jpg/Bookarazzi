@@ -22,11 +22,29 @@ class FirestoreService {
                 "username": username,
                 "email": email,]){
             
-            err in
-            if let err = err{
-                print("Error writing document: \(err)")
+            error in
+            if let error = error{
+                print("Error writing document: \(error)")
             }else{
                 print("Documnet Successfully written!")
+            }
+        }
+    }
+    
+    static func addNewPost(caption: String, imageUrl: String){
+        db.collection("posts").document().setData([
+                "caption": caption,
+                "imageUrl": imageUrl,
+                "ownerId": Auth.auth().currentUser!.uid,
+                "likeCount": 0,
+                "date": Date().timeIntervalSince1970,
+        ]){
+            
+            error in
+            if let error = error{
+                print("Error writing document: \(error)")
+            }else{
+                print("Documnet added Successfully")
             }
         }
     }

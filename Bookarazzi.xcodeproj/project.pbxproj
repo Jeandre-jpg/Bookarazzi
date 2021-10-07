@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		2400526099364CB4C406B3B1 /* Pods_Bookarazzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */; };
 		3C2765D82703A3790075F51C /* SocialFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2765D72703A3790075F51C /* SocialFeedView.swift */; };
-		3C2E312B2704E390008DAF95 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E312A2704E390008DAF95 /* LogoView.swift */; };
+		3C5118DE270E511A006398FB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5118DD270E511A006398FB /* ImagePicker.swift */; };
 		3C62366926F3524300FA9D5B /* BookarazziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366826F3524300FA9D5B /* BookarazziApp.swift */; };
 		3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366A26F3524300FA9D5B /* ContentView.swift */; };
 		3C62366D26F3524400FA9D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C62366C26F3524400FA9D5B /* Assets.xcassets */; };
 		3C62367026F3524400FA9D5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C62366F26F3524400FA9D5B /* Preview Assets.xcassets */; };
 		3C62367A26F352F500FA9D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C62367926F352F500FA9D5B /* GoogleService-Info.plist */; };
+		3C7C9EE9270EF16D009A6876 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EE8270EF16D009A6876 /* LogoView.swift */; };
+		3C7C9EEC270EF56D009A6876 /* AuthScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EEB270EF56D009A6876 /* AuthScreenView.swift */; };
 		3CC344452705ECB900DF8CF0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344442705ECB900DF8CF0 /* AuthService.swift */; };
 		3CC344472705ED2800DF8CF0 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344462705ED2800DF8CF0 /* FirestoreService.swift */; };
 		3CC344492705EDB200DF8CF0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344482705EDB200DF8CF0 /* StorageService.swift */; };
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookarazzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2765D72703A3790075F51C /* SocialFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedView.swift; sourceTree = "<group>"; };
-		3C2E312A2704E390008DAF95 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		3C5118DD270E511A006398FB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3C62366526F3524300FA9D5B /* Bookarazzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookarazzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62366826F3524300FA9D5B /* BookarazziApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarazziApp.swift; sourceTree = "<group>"; };
 		3C62366A26F3524300FA9D5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,8 @@
 		3C62366F26F3524400FA9D5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C62367126F3524400FA9D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C62367926F352F500FA9D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3C7C9EE8270EF16D009A6876 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		3C7C9EEB270EF56D009A6876 /* AuthScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenView.swift; sourceTree = "<group>"; };
 		3CC344442705ECB900DF8CF0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3CC344462705ED2800DF8CF0 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		3CC344482705EDB200DF8CF0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -85,9 +89,19 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		3C5118DC270E5102006398FB /* Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				3C5118DD270E511A006398FB /* ImagePicker.swift */,
+			);
+			path = Utillities;
+			sourceTree = "<group>";
+		};
 		3C62365C26F3524300FA9D5B = {
 			isa = PBXGroup;
 			children = (
+				3C7C9EEA270EF55D009A6876 /* Screens */,
+				3C5118DC270E5102006398FB /* Utillities */,
 				3CC344432705ECA700DF8CF0 /* Services */,
 				3CDE35782704933900AB0D3E /* Project Fonts */,
 				3CDE35752704919D00AB0D3E /* Splash */,
@@ -129,6 +143,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3C7C9EEA270EF55D009A6876 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3C7C9EEB270EF56D009A6876 /* AuthScreenView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		3CC344432705ECA700DF8CF0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				3CDE3576270491AE00AB0D3E /* SplashView.swift */,
-				3C2E312A2704E390008DAF95 /* LogoView.swift */,
+				3C7C9EE8270EF16D009A6876 /* LogoView.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -310,14 +332,16 @@
 				3CDE356B2704909D00AB0D3E /* ProfileView.swift in Sources */,
 				3CC344472705ED2800DF8CF0 /* FirestoreService.swift in Sources */,
 				3CDE35722704916400AB0D3E /* LoginView.swift in Sources */,
+				3C5118DE270E511A006398FB /* ImagePicker.swift in Sources */,
+				3C7C9EEC270EF56D009A6876 /* AuthScreenView.swift in Sources */,
 				3CDE356F2704911400AB0D3E /* UserView.swift in Sources */,
 				3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */,
 				3CDE35742704919500AB0D3E /* SignUpView.swift in Sources */,
 				3CC344452705ECB900DF8CF0 /* AuthService.swift in Sources */,
 				3CC344492705EDB200DF8CF0 /* StorageService.swift in Sources */,
-				3C2E312B2704E390008DAF95 /* LogoView.swift in Sources */,
 				3C62366926F3524300FA9D5B /* BookarazziApp.swift in Sources */,
 				3C2765D82703A3790075F51C /* SocialFeedView.swift in Sources */,
+				3C7C9EE9270EF16D009A6876 /* LogoView.swift in Sources */,
 				3CDE356D270490D400AB0D3E /* NewPostView.swift in Sources */,
 				3CDE3577270491AE00AB0D3E /* SplashView.swift in Sources */,
 			);
@@ -450,6 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bookarazzi/Preview Content\"";
+				DEVELOPMENT_TEAM = 9M2VSZXT7V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bookarazzi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -472,6 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bookarazzi/Preview Content\"";
+				DEVELOPMENT_TEAM = 9M2VSZXT7V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bookarazzi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

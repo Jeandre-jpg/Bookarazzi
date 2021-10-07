@@ -21,7 +21,7 @@ struct ProfileView: View {
                 }
                 .frame(width: 50.0, height: 50.0)
                 Spacer()
-                Text("Profile")
+                Text("Profile Screen")
                     .font(
                         .largeTitle)
                     .foregroundColor(

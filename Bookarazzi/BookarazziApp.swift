@@ -9,20 +9,24 @@ import SwiftUI
 import Firebase
 
 @main
-struct BookarazziApp: App {
+struct instacloneApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @AppStorage("userId") var userId: String = ""
+    
     var body: some Scene {
         WindowGroup {
+            if userId.isEmpty {
+            AuthScreenView()
+        } else {
+//            CreatePostScreenView()
             SplashView()
         }
     }
-   
-
-      }
+}
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         print("Firebase...")
         FirebaseApp.configure()
@@ -30,4 +34,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
 }
-
+}

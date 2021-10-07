@@ -21,7 +21,7 @@ struct SocialFeedView: View {
                 }
 
                 Spacer()
-                Text("Chat")
+                Text("Social Feed Screen")
                     .font(
                         .largeTitle)
                     .foregroundColor(

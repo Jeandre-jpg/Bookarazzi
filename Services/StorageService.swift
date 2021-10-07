@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Foundation
 import Firebase
 import FirebaseStorage
 
@@ -22,8 +21,8 @@ class StorageService {
                                                                                                             String)->Void){
         let fileName = storagePost.child(Date().description)
         if let imageData = image.jpegData(compressionQuality: 1) {
-            
-            storagePost.child(fileName).putData(imageData, metadata: nil){
+         
+            fileName.putData(imageData, metadata: nil) {
                 (_, error) in
                 
                 if let error = error {
@@ -32,31 +31,25 @@ class StorageService {
                     return
                 }
                 
-                storagePost.child(fileName).downloadURL{(url, error) in
+                fileName.downloadURL{(url, error) in
                     if let error = error {
                         print("Error: \(error.localizedDescription)")
                         onError(error.localizedDescription)
                         return
-                }
+                    }
                     
-                    if let url = url {
-                        print("Image \(url)")
+                    if let metaDataUrl = url?.absoluteString {
+                        FirestoreService.addNewPost(caption: caption, imageUrl: metaDataUrl)
                         onSuccess()
                         return
                     }
-                
                 }
                 
-                } else {
-                    onError("Could not decode the image")
-                    return
-            }
             }
             
-            
-           
-        
-    
+        }else {
+            onError("Could not decode image")
+            return
+        }
     }
-    
 }
