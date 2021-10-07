@@ -84,28 +84,32 @@ struct SignUpView: View {
 
             HStack(spacing: 20) {
                 Image(systemName: "person")
-                TextField(signUpUserVal, text: .constant("Username")).foregroundColor(Color.ui.black)
+                TextField(signUpUserVal, text: .constant("Username")).font(.custom("Montserrat-Light", size: 20))
+                    .foregroundColor(Color.ui.black)
                            }
       
             .padding(20)
-            .foregroundColor(Color.ui.white)
+            .foregroundColor(Color.ui.black)
             .background(Color.ui.white)
+            .font(.custom("Montserrat-Light", size: 20))
 
 
             HStack(spacing: 20) {
                 Image(systemName: "envelope")
-                TextField(signUpEmailVal, text: .constant("Email")).foregroundColor(Color.ui.black)
+                TextField(signUpEmailVal, text: .constant("Email")).font(.custom("Montserrat-Light", size: 20))
+                    .foregroundColor(Color.ui.black)
                             }
             .padding(20)
-            .foregroundColor(Color.ui.white)
+            .foregroundColor(Color.ui.black)
             .background(Color.ui.white)
             
             HStack(spacing: 20) {
                 Image(systemName: "lock")
-                TextField(signUpPasswordVal, text: .constant("Password")).foregroundColor(Color.ui.black)
+                TextField(signUpPasswordVal, text: .constant("Password")).font(.custom("Montserrat-Light", size: 20))
+                    .foregroundColor(Color.ui.black)
                          }
             .padding(20)
-            .foregroundColor(Color.ui.white)
+            .foregroundColor(Color.ui.black)
             .background(Color.ui.white)
 
 
@@ -118,8 +122,8 @@ struct SignUpView: View {
                                    .font(.title2)
                                    .frame(width: 150, height: 25, alignment: .leading)
                                       .padding()
-                                       .foregroundColor(Color.ui.orange)
-                              })
+                                       .foregroundColor(Color.ui.white)
+                              }).buttonStyle(GradientButtonStyle())
                            .alert(isPresented: $showingAlert, content: {
                                Alert(title: Text(alertTitle), message: Text(error),
                                      dismissButton: .default(Text("Try Again")))

@@ -28,6 +28,21 @@ struct SocialFeedView: View {
                         .black)
                     .frame(maxWidth: .infinity)
                 Spacer()
+                
+              
+//                Spacer()
+//               
+//                     NavigationView{
+//                         ScrollView{
+//                             PostView()
+//                             PostView()
+//                         }.navigationBarItems(leading: Text("Discover"), trailing: NavigationLink(
+//                         destination: NewPostView(),
+//                         label: {
+//                             Image(systemName: "plus.square.fill.on.square.fill")
+//                         }))
+//                     }
+                
             }.padding(.horizontal) .frame(maxWidth: .infinity)
         }
         .offset(x: showingMenu ? 200.0 : 0.0, y: 0)

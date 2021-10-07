@@ -19,12 +19,24 @@ class MenuContent: Identifiable, ObservableObject {
     
 }
 
+struct GradientButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(Color.ui.white)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color.ui.orange, Color.ui.yellow]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(15.0)
+            .scaleEffect(configuration.isPressed ? 1.3 : 1.0)
+    }
+}
+
+
 extension Color {
     static let ui = Color.UI()
     
     struct UI {
         let beige = Color("BeigeAccent")
-        let yellow = Color("BlueAccent")
+        let yellow = Color("YellowAccent")
         let black = Color("BlackAccent")
         let grey = Color("GreyAccent")
         let orange = Color("OrangeAccent")

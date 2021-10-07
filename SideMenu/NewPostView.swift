@@ -69,7 +69,7 @@ struct NewPostView: View {
             
             Color.ui.beige.edgesIgnoringSafeArea(
                 .all)
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 30) {
                 Button(action: {self.showingMenu.toggle()}) {
                     Image(systemName: "line.horizontal.3")
                         .foregroundColor(.black)
@@ -80,7 +80,7 @@ struct NewPostView: View {
                 
                         VStack(spacing: 20){
                             Text("Create a Post")
-                                .font(.title)
+                                .font(.custom("Roboto-Black", size: 30))
                 
                             if displayImage != nil {
                                 displayImage!.resizable()
@@ -118,8 +118,9 @@ struct NewPostView: View {
                                     .font(.title2)
                                     .frame(width: 320, height: 25, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                        .padding(20)
+                                       .foregroundColor(Color.ui.black)
                                })
-                                                .background(Color.ui.yellow)
+                                .background(Color.ui.yellow)
                                .foregroundColor(Color.white)
                                .cornerRadius(15)
                                .alert(isPresented: $showingAlert, content: {
@@ -135,7 +136,7 @@ struct NewPostView: View {
                             .default(Text("Upload an Image")){
                                 self.showingImagePicker = true
                                 self.sourceType = .photoLibrary
-                            }
+                            },
                             .default(Text("Take a Picture")){
                             self.showingImagePicker = true
                             self.sourceType = .camera

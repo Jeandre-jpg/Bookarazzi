@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+
     @State var isLoading = true
        @State var signInEmailVal = "email"
        @State var signInPasswordVal = "password"
@@ -53,6 +55,7 @@ struct LoginView: View {
               ZStack{
                   Color.ui.beige
                       .ignoresSafeArea()
+                  
 
               VStack(alignment: .leading, spacing: 40){
                   HStack( spacing: 20){
@@ -83,19 +86,19 @@ struct LoginView: View {
                           .foregroundColor(Color.ui.black)
                                }
                   .padding(20)
-                  .foregroundColor(Color.ui.white)
+                  .foregroundColor(Color.ui.black)
                   .background(Color.ui.white)
 
          
 
 
                   HStack(spacing: 20) {
-                      Image(systemName: "lock.circle")
+                      Image(systemName: "lock")
                       TextField(signInPasswordVal, text: .constant("Password")).font(.custom("Montserrat-Light", size: 20))
                           .foregroundColor(Color.ui.black)
                                }
                   .padding(20)
-                  .foregroundColor(Color.ui.white)
+                  .foregroundColor(Color.ui.black)
                   .background(Color.ui.white)
 
                  
@@ -108,11 +111,11 @@ struct LoginView: View {
                     .font(.custom("Roboto-Black", size: 30))
                     .font(.title2)
                     .frame(width: 100, height: 25, alignment: .leading)
-                       .padding(20)
-                       .foregroundColor(Color.ui.orange)
-               })
+                       .padding(5)
+                       .foregroundColor(Color.ui.white)
+               }).buttonStyle(GradientButtonStyle())
 
-        }
+              }.padding()
          .multilineTextAlignment(.leading)
         .opacity(isLoading ? 0 : 1)
         .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/.delay(0.8))
