@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LogoView: View {
+    
+    @State var isActive:Bool = false
     var body: some View {
         ZStack{
             Color.ui.beige
@@ -36,6 +38,14 @@ struct LogoView: View {
                     
                 
               
+            }
+        }.onAppear {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+              
+                withAnimation {
+                    self.isActive = true
+                }
             }
         }
     }

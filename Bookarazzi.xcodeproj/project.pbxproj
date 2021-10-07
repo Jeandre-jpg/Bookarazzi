@@ -18,6 +18,11 @@
 		3C7C9EE9270EF16D009A6876 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EE8270EF16D009A6876 /* LogoView.swift */; };
 		3C7C9EEC270EF56D009A6876 /* AuthScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EEB270EF56D009A6876 /* AuthScreenView.swift */; };
 		3C7C9EF5270F22F4009A6876 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EF4270F22F4009A6876 /* PostView.swift */; };
+		3C7C9EFA270F2716009A6876 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EF9270F2716009A6876 /* SearchBarView.swift */; };
+		3C7C9EFC270F27C2009A6876 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EFB270F27C2009A6876 /* OnboardingView.swift */; };
+		3C7C9EFE270F2832009A6876 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EFD270F2832009A6876 /* OnboardingCardView.swift */; };
+		3C7C9F00270F286E009A6876 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9EFF270F286E009A6876 /* ButtonView.swift */; };
+		3C7C9F05270F33C6009A6876 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C9F04270F33C6009A6876 /* PostModel.swift */; };
 		3CC344452705ECB900DF8CF0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344442705ECB900DF8CF0 /* AuthService.swift */; };
 		3CC344472705ED2800DF8CF0 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344462705ED2800DF8CF0 /* FirestoreService.swift */; };
 		3CC344492705EDB200DF8CF0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344482705EDB200DF8CF0 /* StorageService.swift */; };
@@ -49,6 +54,11 @@
 		3C7C9EE8270EF16D009A6876 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		3C7C9EEB270EF56D009A6876 /* AuthScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenView.swift; sourceTree = "<group>"; };
 		3C7C9EF4270F22F4009A6876 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		3C7C9EF9270F2716009A6876 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		3C7C9EFB270F27C2009A6876 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		3C7C9EFD270F2832009A6876 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		3C7C9EFF270F286E009A6876 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		3C7C9F04270F33C6009A6876 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		3CC344442705ECB900DF8CF0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3CC344462705ED2800DF8CF0 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		3CC344482705EDB200DF8CF0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 		3C62365C26F3524300FA9D5B = {
 			isa = PBXGroup;
 			children = (
+				3C7C9F03270F33B4009A6876 /* Models */,
 				3C7C9EF3270F22E1009A6876 /* Components */,
 				3C5118DC270E5102006398FB /* Utillities */,
 				3CC344432705ECA700DF8CF0 /* Services */,
@@ -149,8 +160,19 @@
 			isa = PBXGroup;
 			children = (
 				3C7C9EF4270F22F4009A6876 /* PostView.swift */,
+				3C7C9EF9270F2716009A6876 /* SearchBarView.swift */,
+				3C7C9EFD270F2832009A6876 /* OnboardingCardView.swift */,
+				3C7C9EFF270F286E009A6876 /* ButtonView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3C7C9F03270F33B4009A6876 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C7C9F04270F33C6009A6876 /* PostModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3CC344432705ECA700DF8CF0 /* Services */ = {
@@ -169,6 +191,7 @@
 				3C7C9EEB270EF56D009A6876 /* AuthScreenView.swift */,
 				3CDE35712704916400AB0D3E /* LoginView.swift */,
 				3CDE35732704919500AB0D3E /* SignUpView.swift */,
+				3C7C9EFB270F27C2009A6876 /* OnboardingView.swift */,
 			);
 			path = "Sign In & Sign Up";
 			sourceTree = "<group>";
@@ -334,11 +357,15 @@
 			files = (
 				3CDE356B2704909D00AB0D3E /* ProfileView.swift in Sources */,
 				3CC344472705ED2800DF8CF0 /* FirestoreService.swift in Sources */,
+				3C7C9F00270F286E009A6876 /* ButtonView.swift in Sources */,
+				3C7C9EFE270F2832009A6876 /* OnboardingCardView.swift in Sources */,
 				3CDE35722704916400AB0D3E /* LoginView.swift in Sources */,
+				3C7C9EFC270F27C2009A6876 /* OnboardingView.swift in Sources */,
 				3C5118DE270E511A006398FB /* ImagePicker.swift in Sources */,
 				3C7C9EEC270EF56D009A6876 /* AuthScreenView.swift in Sources */,
 				3CDE356F2704911400AB0D3E /* UserView.swift in Sources */,
 				3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */,
+				3C7C9F05270F33C6009A6876 /* PostModel.swift in Sources */,
 				3CDE35742704919500AB0D3E /* SignUpView.swift in Sources */,
 				3CC344452705ECB900DF8CF0 /* AuthService.swift in Sources */,
 				3CC344492705EDB200DF8CF0 /* StorageService.swift in Sources */,
@@ -347,6 +374,7 @@
 				3C2765D82703A3790075F51C /* SocialFeedView.swift in Sources */,
 				3C7C9EE9270EF16D009A6876 /* LogoView.swift in Sources */,
 				3CDE356D270490D400AB0D3E /* NewPostView.swift in Sources */,
+				3C7C9EFA270F2716009A6876 /* SearchBarView.swift in Sources */,
 				3CDE3577270491AE00AB0D3E /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

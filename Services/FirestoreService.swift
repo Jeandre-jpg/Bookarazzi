@@ -5,11 +5,13 @@
 //  Created by Jeandré De Villiers on 2021/09/30.
 //
 
+
 import Foundation
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
-class FirestoreService {
+class FirestoreService: ObservableObject {
     
     static var db = Firestore.firestore()
     
@@ -45,6 +47,31 @@ class FirestoreService {
                 print("Error writing document: \(error)")
             }else{
                 print("Documnet added Successfully")
+            }
+        }
+    }
+    
+    @Published var posts = [Post]()
+    
+    func fetchAllPost() {
+        FirestoreService.db.collection("posts").getDocuments{
+            (QuerySnapshot, error) in
+            
+            if let error = error{
+                print(error)
+            }else{
+                self.posts = QuerySnapshot!.documents.map{ (queryDocument) -> Post in
+                    
+                    let document = queryDocument.data()
+                    let caption = document["caption"] as? String ?? "No Caption"
+                    let ownerID = document["ownerId"] as? String ?? "No User"
+                    let imageUrl = document["caption"] as? String ?? ""
+                    let likeCount = document["likeCount"] as? Int ?? 0
+                    let date = document["date"] as? Double ?? 0
+                    
+                    return Post(postId: queryDocument.documentID, caption: caption, ownerId: ownerID, likeCount: likeCount, date: date, imageUrl: imageUrl)
+                    
+                }
             }
         }
     }

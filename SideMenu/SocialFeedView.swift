@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SocialFeedView: View {
+    
+    @ObservedObject var viewModel = FirestoreService()
     @State private var showingMenu = false
     var body: some View {
         ZStack {
@@ -30,21 +32,32 @@ struct SocialFeedView: View {
                 Spacer()
                 
               
-//                Spacer()
-//               
-//                     NavigationView{
-//                         ScrollView{
-//                             PostView()
-//                             PostView()
-//                         }.navigationBarItems(leading: Text("Discover"), trailing: NavigationLink(
-//                         destination: NewPostView(),
-//                         label: {
-//                             Image(systemName: "plus.square.fill.on.square.fill")
-//                         }))
-//                     }
-                
-            }.padding(.horizontal) .frame(maxWidth: .infinity)
-        }
+                Spacer()
+               
+                NavigationView{
+                   ScrollView{
+                       
+                       if viewModel.posts.count < 1 {
+                           ProgressView()
+                               .progressViewStyle(CircularProgressViewStyle(tint: Color.red))
+                       }else{
+                           ForEach(viewModel.posts) {post in
+                               PostView(post: post)
+                       }
+            
+                       }
+                       
+                    }.navigationBarItems(leading: Text("Discover"), trailing: NavigationLink(
+                    destination: NewPostView(),
+                    label: {
+                        Image(systemName: "plus.square.fill.on.square.fill")
+                    }))
+            }
+                .onAppear(perform: {
+                    viewModel.fetchAllPost()
+                })
+                }
+            }
         .offset(x: showingMenu ? 200.0 : 0.0, y: 0)
         .animation(.easeOut)
     }

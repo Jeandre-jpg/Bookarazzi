@@ -17,7 +17,7 @@ struct instacloneApp: App {
     var body: some Scene {
         WindowGroup {
             if userId.isEmpty {
-            AuthScreenView()
+            SocialFeedView()
         } else {
 //            CreatePostScreenView()
             SplashView()

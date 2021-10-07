@@ -7,31 +7,35 @@
 
 import SwiftUI
 
-//extension String{
-//
-//func loadImage() -> UIImage{
-//    do{
-//        guard let url = URL(string: self) else {
-//            return UIImage()
-//        }
-//
-//        let data: Data = try Data(contentsOf: <#T##URL#>)
-//        return UIImage(data: data) ?? UIImage()
-//    } catch{
-//        return UIImage()
-//    }
-//
-//}
-//}
+extension String{
+
+func loadImage() -> UIImage{
+    do{
+        guard let url = URL(string: self) else {
+            return UIImage()
+        }
+
+        let data: Data = try Data(contentsOf: url)
+        return UIImage(data: data) ?? UIImage()
+    } catch{
+        return UIImage()
+    }
+
+}
+}
 
 struct PostView: View {
+    
+    var post: Post
+    
     var body: some View {
         VStack(alignment: .leading){
             HStack{
-                Text("@openwindow")
+                Text("\(post.ownerId)")
                     .fontWeight(.bold)
                 
                 Spacer()
+               
                 Image(systemName: "highlighter")
                     .renderingMode(.original)
                     .resizable()
@@ -39,9 +43,10 @@ struct PostView: View {
                     .frame(width: 30, height: 30, alignment: .center)
             }
             
-//            Image(uiImage: "https://dogtime.com/assets/uploads/2011/03/puppy-development.jpg".loadImage())
-//                .resizable()
-//                .scaledToFit()
+            
+            Image(uiImage: "\(post.imageUrl)".loadImage())
+                .resizable()
+                .scaledToFit()
             
             
             Text("My caption will be added here")
@@ -57,13 +62,13 @@ struct PostView: View {
                     .frame(width: 30, height: 30, alignment: .center)
                     .foregroundColor(Color.red)
                 
-                Text("2")
+                Text("\(post.likeCount)")
                     .padding(.top, 2)
                     .font(.title3)
 
                 Spacer()
                 
-                Text("07 October 2021")
+                Text("\(NSDate(timeIntervalSince1970: post.date))")
                     .padding(.top, 4)
                 
                 
@@ -72,10 +77,9 @@ struct PostView: View {
         }.padding()
     }
 }
-
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView()
+        PostView(post: Post(postId: "1", caption: "Caption", ownerId: "Owner", likeCount: 0, date: 0, imageUrl: "https://dogtime.com/assets/uploads/2011/03/puppy-development.jpg"))
             .previewLayout(.sizeThatFits)
     }
 }
