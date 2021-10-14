@@ -15,14 +15,15 @@ class FirestoreService: ObservableObject {
     
     static var db = Firestore.firestore()
     
-    static func getUserId(userId: String)-> DocumentReference {
+    static func getUserId(userId: String) -> DocumentReference {
         return db.collection("users").document(userId)
     }
     
     static func addNewUser(uid: String, username: String, email: String){
         db.collection("users").document(uid).setData([
                 "username": username,
-                "email": email,]){
+                "email": email,
+                ]){
             
             error in
             if let error = error{
@@ -32,6 +33,7 @@ class FirestoreService: ObservableObject {
             }
         }
     }
+
     
     static func addNewPost(caption: String, imageUrl: String){
         db.collection("posts").document().setData([

@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct AuthScreenView: View {
+    
     @State var showSignUp = false
+    
+   
+    
     var body: some View {
         ZStack{
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
-            Color.ui.yellow
+            Color.ui.beige
                 .clipShape(CShape())
             
             Path {path in
                 path.addArc(center: CGPoint(x: UIScreen.main.bounds.width - 130, y: UIScreen.main.bounds.height - 50), radius: 40, startAngle: .zero, endAngle: .init(degrees: 180),
                             clockwise: true)
             }
-            .fill(Color.ui.yellow)
+            .fill(Color.ui.beige)
             
             Button(action: {
-                showSignUp = true
+                withAnimation(.easeOut){
+                    self.showSignUp = false
+                }
             }, label: {
                 Image(systemName: showSignUp ? "person.badge.plus.fill" : "xmark")
                 .font(.system(size: 25, weight: .bold))
-                .foregroundColor(.white)
+                .foregroundColor(Color.ui.black)
             }).offset(x: -37, y: -30)
             
             Button(action: {
@@ -36,17 +42,18 @@ struct AuthScreenView: View {
             }, label: {
                 Image(systemName: showSignUp ? "xmark" : "person.badge.plus.fill")
                  .font(.system(size: 25, weight: .bold))
-                 .foregroundColor(Color.ui.yellow)
-             }).offset(y: showSignUp ?
-                -UIScreen.main.bounds.height + 130 : 0)
+                 .foregroundColor(Color.ui.black)
+            }).offset(x: -115, y: -40)
+        }
+        .offset(y: showSignUp ? -UIScreen.main.bounds.height + 130 : 0)
             
             showSignUp ? nil: LoginView()
             showSignUp ? SignUpView() : nil
         
-        }
 }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .statusBar(hidden: true)
-        .background(Color.ui.yellow)
+        .background(Color.ui.beige
+        .edgesIgnoringSafeArea(.all))
                         
     }
 }

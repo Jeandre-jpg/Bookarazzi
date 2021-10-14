@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
-
 struct SplashView: View {
+    @State var logo = 1
+    
     @ScaledMetric(relativeTo: .body) var scaledPadding: CGFloat = 10
 
     var body: some View {
-        
+        NavigationView {
         ZStack{
             Color.ui.beige
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 50){
-                Image("Logo")
+                Image("\(logo)")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100, alignment: .center)
@@ -33,7 +34,7 @@ struct SplashView: View {
                 
                 
                 
-                NavigationLink(destination: LoginView()){
+                NavigationLink(destination: AuthScreenView()){
                         Text("Start")
                         .font(.title)
                         .padding(20)
@@ -44,18 +45,18 @@ struct SplashView: View {
                         .border(Color.ui.grey, width: 2, cornerRadius:25)
                       }
                 
-                NavigationLink(destination: SignUpView()){
-                        Text("Don't already have an Accoun? Sign Up")
-                        .font(.body)
-                        .padding()
+                NavigationLink(destination: AuthScreenView()){
+                        Text("Don't already have an Account?")
+                        .font(.custom("Montserrat-Thin", size: 20))
                         .foregroundColor(Color.ui.black)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 350, height: 50.0)
-            
-                      }
+                        .frame(width: 350, height: 100.0)
+        
+                  }
             }
         }
     }
+}
 }
 
 struct SplashView_Previews: PreviewProvider {

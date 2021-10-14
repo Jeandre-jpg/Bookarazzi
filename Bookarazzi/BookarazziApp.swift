@@ -17,10 +17,10 @@ struct instacloneApp: App {
     var body: some Scene {
         WindowGroup {
             if userId.isEmpty {
-            SocialFeedView()
+                LogoView()
         } else {
 //            CreatePostScreenView()
-            SplashView()
+            OnboardingView()
         }
     }
 }

@@ -38,9 +38,6 @@ struct OnboardingCardView: View {
                 .frame(width: 250, height: 50, alignment: .center)
                 .padding()
               
-            
-            
-        
                 
                 ButtonView()
                     .padding(.vertical, 20)
@@ -48,8 +45,10 @@ struct OnboardingCardView: View {
             
            
              
-        }.background(Color.ui.beige)
-            .edgesIgnoringSafeArea(.all)
+        }
+        .background(Color.ui.beige
+        .edgesIgnoringSafeArea(.all))
+        .cornerRadius(20.0)
     
        
     }

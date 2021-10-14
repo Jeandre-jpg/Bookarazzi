@@ -75,13 +75,14 @@ struct NewPostView: View {
                         .foregroundColor(.black)
                 }
                 .frame(width: 50.0, height: 50.0)
-         
+
                 
                 
                         VStack(spacing: 20){
                             Text("Create a Post")
-                                .font(.custom("Roboto-Black", size: 30))
-                
+                                .font(.custom("Roboto-Condensed", size: 30))
+                            Spacer()
+                            
                             if displayImage != nil {
                                 displayImage!.resizable()
                                     .scaledToFit()
@@ -98,15 +99,18 @@ struct NewPostView: View {
                                 .scaledToFit()
                                 .frame(width: 200, height: 150, alignment: .center)
                                 .padding(30)
+                               
                                 .background(Color.ui.white)
                                 .onTapGesture (perform: {
                                     self.showingImagePicker = true
                                 })
+                                .cornerRadius(20.0)
                             }
                 
                             TextEditor(text: caption == "" ? .constant("Placeholder"): $caption)
                                 .padding()
                                 .frame(height: 200)
+                            
                 
                 
                             Button(action: {
@@ -114,9 +118,8 @@ struct NewPostView: View {
                                    print("clicked create post button")
                                }, label: {
                                    Text("Create Post")
-                                    .bold()
-                                    .font(.title2)
-                                    .frame(width: 320, height: 25, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .font(.custom("Roboto-Condensed", size: 30))
+                                    .frame(width: 320, height: 25, alignment: .center)
                                        .padding(20)
                                        .foregroundColor(Color.ui.black)
                                })
@@ -145,13 +148,16 @@ struct NewPostView: View {
                         ])
                     
                             }.padding(.horizontal) .frame(maxWidth: .infinity)
+                        }.padding(.horizontal) .frame(maxWidth: .infinity)
+                
+                          
 
                     } .offset(x: showingMenu ? 200.0 : 0.0, y: 0)
                 .animation(.easeOut)
                 }
                 
             }
-        }
+//        }
        
     
     

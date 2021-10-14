@@ -14,8 +14,9 @@ class AuthService {
     static var auth = Auth.auth()
     
     static func signUp(username: String, email: String, password: String, onSuccess:
-                        @escaping(_ user: String)-> Void, onError: @escaping(_ errorMessage:
-                                                                                String)-> Void){
+                        @escaping(_ user: String) -> Void, onError: @escaping(_ errorMessage:
+                        String) -> Void){
+        
         auth.createUser(withEmail: email, password: password){
             (authData, error) in
             if error != nil {
