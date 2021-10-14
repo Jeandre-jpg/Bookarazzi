@@ -57,15 +57,15 @@ struct SocialFeedView: View {
                 }
                   
             }
-        .toolbar {
-             ToolbarItem(placement: .navigationBarTrailing) {
-                 Menu(content: {
-                     Text("Menu Item 1")
-                     Text("Menu Item 2")
-                      Text("Menu Item 3")
-                 }, label: {Text("button")})
-              }
-          }
+//        .toolbar {
+//             ToolbarItem(placement: .navigationBarTrailing) {
+//                 Menu(content: {
+//                     Text("Menu Item 1")
+//                     Text("Menu Item 2")
+//                      Text("Menu Item 3")
+//                 }, label: {Text("button")})
+//              }
+//          }
        
         .animation(.easeOut)
     }
