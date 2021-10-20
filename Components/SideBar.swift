@@ -13,9 +13,11 @@ struct Sidebar: View {
             #if os(iOS)
             SideBarContent()
                 .navigationTitle("Bookarazzi")
+                .background(Color.ui.beige)
             #else
             SideBarContent()
                 .frame(minWidth: 200, idealWidth: 250,maxWidth: 300)
+                .background(Color.ui.beige)
             #endif
 //        }
     }

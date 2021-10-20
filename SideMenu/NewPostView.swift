@@ -69,19 +69,11 @@ struct NewPostView: View {
             
             Color.ui.beige.edgesIgnoringSafeArea(
                 .all)
-            VStack(alignment: .leading, spacing: 30) {
-                Button(action: {self.showingMenu.toggle()}) {
-                    Image(systemName: "line.horizontal.3")
-                        .foregroundColor(.black)
-                }
-                .frame(width: 50.0, height: 50.0)
-
-                
-                
-                        VStack(spacing: 20){
+            VStack(alignment: .center, spacing: 30) {
+                       
                             Text("Create a Post")
                                 .font(.custom("Roboto-Condensed", size: 30))
-                            Spacer()
+                         
                             
                             if displayImage != nil {
                                 displayImage!.resizable()
@@ -149,15 +141,15 @@ struct NewPostView: View {
                     
                             }.padding(.horizontal) .frame(maxWidth: .infinity)
                         }.padding(.horizontal) .frame(maxWidth: .infinity)
+            .animation(.easeOut)
                 
                           
 
-                    } .offset(x: showingMenu ? 200.0 : 0.0, y: 0)
-                .animation(.easeOut)
+                    }
+               
                 }
                 
-            }
-//        }
+        
        
     
     

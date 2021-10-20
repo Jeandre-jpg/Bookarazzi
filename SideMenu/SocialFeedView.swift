@@ -18,7 +18,7 @@ struct SocialFeedView: View {
             
             Color.ui.beige.edgesIgnoringSafeArea(
                        .all)
-                   VStack(alignment: .leading) {
+                   VStack(alignment: .center) {
                        
                        
                  
@@ -26,11 +26,11 @@ struct SocialFeedView: View {
                 Text("Social Feed Screen")
                     .font(.custom("Robot-Condensed", size: 30))
                     .foregroundColor(Color.ui.black)
-                    .frame(maxWidth: .infinity)
-                Spacer()
+                    .frame(width: 300, height: 50, alignment: .center)
+             
                  
                 NavigationView{
-                   ScrollView{
+                   ScrollView(showsIndicators: false){
                        
                        if viewModel.posts.count < 1 {
                            ProgressView()
@@ -43,13 +43,16 @@ struct SocialFeedView: View {
                        }
                        
                     }
-                   .navigationBarItems(leading: Text("Discover"), trailing: NavigationLink(
+                   .navigationBarItems(leading: Text("Feed"), trailing: NavigationLink(
                     destination: NewPostView(),
                     label: {
                         Image(systemName: "plus.square.fill.on.square.fill")
+                            .renderingMode(.original)
+                            .frame(width: 40, height: 40, alignment: .center)
                     }))
-            }
-                .background(Color.ui.beige)
+            }.background( Color.ui.beige.edgesIgnoringSafeArea(
+                .all))
+               
                 .onAppear(perform: {
                     viewModel.fetchAllPost()
                 })
@@ -57,15 +60,7 @@ struct SocialFeedView: View {
                 }
                   
             }
-//        .toolbar {
-//             ToolbarItem(placement: .navigationBarTrailing) {
-//                 Menu(content: {
-//                     Text("Menu Item 1")
-//                     Text("Menu Item 2")
-//                      Text("Menu Item 3")
-//                 }, label: {Text("button")})
-//              }
-//          }
+
        
         .animation(.easeOut)
     }

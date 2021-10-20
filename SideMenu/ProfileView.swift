@@ -11,7 +11,6 @@ struct ProfileView: View {
     @State private var showingMenu = false
     var body: some View {
         
-        NavigationView{
         ZStack {
             
             Color.ui.beige.edgesIgnoringSafeArea(
@@ -154,13 +153,13 @@ struct ProfileView: View {
         
       
         }
-        
-        .padding(.horizontal) .frame(maxWidth: .infinity)
+        .background(Color.ui.beige
+                        .ignoresSafeArea(.all))
         .animation(.easeOut)
        
     }
 }
-}
+
 
 
 struct ProfileView_Previews: PreviewProvider {

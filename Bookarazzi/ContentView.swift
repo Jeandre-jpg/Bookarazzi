@@ -43,6 +43,7 @@ struct ContentView: View {
             }
             .navigationTitle("Bookarazzi")
         }
+        .background(Color.ui.beige)
         
     }
 }

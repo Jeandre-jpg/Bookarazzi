@@ -12,6 +12,7 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
+pod 'SwiftDrawer'
 # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
 # for Analytics without IDFA collection capability
 

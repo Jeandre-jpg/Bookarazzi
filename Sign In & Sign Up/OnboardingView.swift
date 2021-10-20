@@ -11,7 +11,9 @@ struct OnboardingView: View {
     var body: some View {
         TabView{
             OnboardingCardView(image: "book-stack", title: "Read to learn, Learn to grow", description: "See more of books through social media!")
+            
             OnboardingCardView(image: "bookshelf", title: "Get the right book for you", description: "View all of your friends posts.")
+            
             OnboardingCardView(image: "notebook", title: "Books that inspire you!", description: "Click below to start.")
         }
        

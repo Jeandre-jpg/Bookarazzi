@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension String{
+    
+    
 
 func loadImage() -> UIImage{
     do{
@@ -28,11 +30,13 @@ struct PostView: View {
     
     var post: Post
     
+    @AppStorage("userId") var userId: String = ""
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 30){
             HStack{
                 
-                Text("\(post.ownerId)")
+                Text(post.ownerId)
                     .font(.custom("Roboto-Condensed", size: 30))
                     .foregroundColor(Color.ui.black)
                 

@@ -13,14 +13,14 @@ struct instacloneApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @AppStorage("userId") var userId: String = ""
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
     
     var body: some Scene {
         WindowGroup {
             if userId.isEmpty {
-                LogoView()
+            LogoView()
         } else {
-//            CreatePostScreenView()
-            OnboardingView()
+            ContentView()
         }
     }
 }
