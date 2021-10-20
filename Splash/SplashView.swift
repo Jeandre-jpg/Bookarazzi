@@ -25,16 +25,14 @@ struct SplashView: View {
                     
                 
                 Text("DISCOVER\nYOUR\nBOOKARAZZI\nFANTASY")
-                    .font(.custom("Roboto-Black", size: 48))
+                    .font(.custom("Roboto-Black", size: 45))
                     .multilineTextAlignment(.leading)
-                    .lineLimit(20)
-                    .lineSpacing(20)
                     .padding()
                     .foregroundColor(Color.ui.black)
                 
                 
                 
-                NavigationLink(destination: AuthScreenView()){
+                NavigationLink(destination: OnboardingView()){
                         Text("Start")
                         .font(.title)
                         .padding(20)
@@ -45,7 +43,7 @@ struct SplashView: View {
                         .border(Color.ui.grey, width: 2, cornerRadius:25)
                       }
                 
-                NavigationLink(destination: AuthScreenView()){
+                NavigationLink(destination: OnboardingView()){
                         Text("Don't already have an Account?")
                         .font(.custom("Montserrat-Thin", size: 20))
                         .foregroundColor(Color.ui.black)

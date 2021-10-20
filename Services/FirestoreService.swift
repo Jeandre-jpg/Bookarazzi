@@ -67,7 +67,7 @@ class FirestoreService: ObservableObject {
                     let document = queryDocument.data()
                     let caption = document["caption"] as? String ?? "No Caption"
                     let ownerID = document["ownerId"] as? String ?? "No User"
-                    let imageUrl = document["caption"] as? String ?? ""
+                    let imageUrl = document["imageUrl"] as? String ?? ""
                     let likeCount = document["likeCount"] as? Int ?? 0
                     let date = document["date"] as? Double ?? 0
                     

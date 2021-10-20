@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var isLoading = true
-    @State private var signInEmailVal:String = "email"
+    @State private var signInEmailVal:String = "Email"
     @State private var signInPasswordVal:String = "password"
     
     @State private var error: String = ""
@@ -56,25 +56,31 @@ struct LoginView: View {
     var body: some View {
         VStack{
             
-            VStack(alignment: .leading, spacing: 40){
+            VStack(alignment: .center, spacing: 40){
            
         Text("Login")
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .font(.custom("Montserrat-Thin", size: 38))
+            .frame(maxWidth: .infinity, alignment: .center)
+            .font(.custom("Roboto-Condensed", size: 48))
             .multilineTextAlignment(.leading)
+                
+                Image("book (1)")
+                    .renderingMode(.template)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 150, height: 150, alignment: .center)
+                    .accessibility(hidden: true)
             
             Text("Welcome Back")
-                .font(.custom("Roboto-Condensed", size: 48))
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.custom("Montserrat-Thin", size: 25))
+                .frame(maxWidth: .infinity, alignment: .center)
                 .multilineTextAlignment(.leading)
-                .padding(.top, 50)
         }
         .padding(.bottom, 30)
             
             HStack(spacing:20) {
                 Image(systemName: "envelope")
                     .padding(.leading, 10)
-                TextField("email", text: $signInEmailVal)
+                TextField("Email", text: $signInEmailVal)
                     .padding()
                     .font(.custom("Montserrat-Light", size: 20))
                     .autocapitalization(.none)
@@ -101,22 +107,36 @@ struct LoginView: View {
             
             
             Button(action: {
-                   print("clicked sign in button")
+                   print("clicked sign up button")
                 signIn()
                }, label: {
                    Text("Login")
+                    .bold()
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .center)
-                       .padding()
+                    .padding()
+                       
                })
-                .background(Color.ui.orange)
-               .edgesIgnoringSafeArea(.all)
-               .foregroundColor(Color.white)
-               .cornerRadius(10.0)
-               .alert(isPresented: $showingAlert, content: {
-                   Alert(title: Text(alertTitle), message: Text(error),
-                         dismissButton: .default(Text("Try Again")))
-               })
+            .cornerRadius(10.0)
+            .foregroundColor(Color.ui.black)
+            .background(Color.ui.yellow)
+            .cornerRadius(20.0)
+            .alert(isPresented: $showingAlert, content: {
+                Alert(title: Text(alertTitle), message: Text(error),
+                      dismissButton: .default(Text("Try Again")))
+                
+            })
+        
+        NavigationLink(destination: SocialFeedView()){
+                          Text("")
+                          .font(.custom("Montserrat-Thin", size: 20))
+                          .padding(.top, -50)
+                          .foregroundColor(Color.ui.black)
+                          .multilineTextAlignment(.leading)
+                          .frame(width: 50, height: 10.0)
+          
+                    }
+                
                
         }
         

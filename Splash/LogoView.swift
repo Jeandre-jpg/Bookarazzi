@@ -53,7 +53,7 @@ struct LogoView: View {
                                              .foregroundColor(Color.ui.black)
                                              
                                          
-                                         Text("Developed by: Jeandré De Villiers")
+                                         Text("Developed by: Jeandrè De Villiers")
                                              .font(Font.custom("Montserrat-Light", size: 15))
                                              .lineLimit(20)
                                              .frame(width: 250, height: 50, alignment: .center)

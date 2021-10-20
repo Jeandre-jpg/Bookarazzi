@@ -89,6 +89,7 @@ struct PostView: View {
             }
             
         }
+        .cornerRadius(20.0)
         .padding()
         .background(Color.ui.beige
             .ignoresSafeArea(.all))

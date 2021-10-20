@@ -17,11 +17,7 @@ struct instacloneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if userId.isEmpty {
-            LogoView()
-        } else {
-            ContentView()
-        }
+          LogoView()
     }
 }
 

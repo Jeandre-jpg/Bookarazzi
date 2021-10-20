@@ -67,9 +67,9 @@ struct NewPostView: View {
     var body: some View {
         ZStack {
             
-            Color.ui.beige.edgesIgnoringSafeArea(
+            Color.ui.orange.edgesIgnoringSafeArea(
                 .all)
-            VStack(alignment: .center, spacing: 30) {
+            VStack(alignment: .center, spacing: 40) {
                        
                             Text("Create a Post")
                                 .font(.custom("Roboto-Condensed", size: 30))
@@ -86,9 +86,10 @@ struct NewPostView: View {
                 
                             }else{
                 
-                            Image(systemName: "photo.on.rectangle.angled")
+                            Image("bookshelf")
                                 .resizable()
                                 .scaledToFit()
+                                .saturation(0.1)
                                 .frame(width: 200, height: 150, alignment: .center)
                                 .padding(30)
                                
@@ -102,7 +103,7 @@ struct NewPostView: View {
                             TextEditor(text: caption == "" ? .constant("Placeholder"): $caption)
                                 .padding()
                                 .frame(height: 200)
-                            
+                              
                 
                 
                             Button(action: {
@@ -122,8 +123,13 @@ struct NewPostView: View {
                                    Alert(title: Text(errorTitle), message: Text(errorMessage),
                                          dismissButton: .default(Text("Try Again")))
                                 })
-
-                        }.padding()
+                               .cornerRadius(20.0)
+                        }
+            .cornerRadius(20.0)
+            .padding(20)
+            .cornerRadius(20.0)
+            .background(Color.ui.orange)
+            
                     .sheet(isPresented: $showingImagePicker, onDismiss: loadImage){
                         ImagePicker(pickedImage: $pickedImage)
                     }.actionSheet(isPresented: $showingActionSheet){
@@ -140,7 +146,9 @@ struct NewPostView: View {
                         ])
                     
                             }.padding(.horizontal) .frame(maxWidth: .infinity)
-                        }.padding(.horizontal) .frame(maxWidth: .infinity)
+                        }
+        .padding(.horizontal)
+        .frame(maxWidth: .infinity)
             .animation(.easeOut)
                 
                           

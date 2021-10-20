@@ -23,10 +23,11 @@ struct SocialFeedView: View {
                        
                  
 
-                Text("Social Feed Screen")
-                    .font(.custom("Robot-Condensed", size: 30))
+                Text("Social Feed")
+                    .font(.custom("Roboto-Condensed", size: 30))
+                    .padding(.top, -50)
                     .foregroundColor(Color.ui.black)
-                    .frame(width: 300, height: 50, alignment: .center)
+                    .frame(width: 300, height: 25, alignment: .center)
              
                  
                 NavigationView{
@@ -47,12 +48,14 @@ struct SocialFeedView: View {
                     destination: NewPostView(),
                     label: {
                         Image(systemName: "plus.square.fill.on.square.fill")
+                           
                             .renderingMode(.original)
                             .frame(width: 40, height: 40, alignment: .center)
                     }))
             }.background( Color.ui.beige.edgesIgnoringSafeArea(
                 .all))
-               
+                .accentColor(Color.ui.orange)
+                .font(.custom("Montserrat-Thin", size: 25))
                 .onAppear(perform: {
                     viewModel.fetchAllPost()
                 })
