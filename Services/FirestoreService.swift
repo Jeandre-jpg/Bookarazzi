@@ -65,8 +65,10 @@ class FirestoreService: ObservableObject {
                 let picture = user.data()?["picture"] as? String ?? ""
                 let bio = user.data()?["bio"] as? String ?? ""
                 let email = user.data()?["email"] as? String ?? ""
-                let followers = user.data()?["followers"] as! [User]
-                let following = user.data()?["username"] as! [User]
+                let followers = user.data()?["followers"] as? Int ?? 0
+                let following = user.data()?["username"] as? Int ?? 0
+                //db.collection (fetchPosts) db.collection("posts").where(userId, uid).get()
+                //posts: [ var wat jy gefetch het van die collection ]
 
                 print("user fetched")
                 onSuccess(User(userName: username, email: email, posts: [], followers: 0, following: 0, bio: bio, imageUrl: picture))

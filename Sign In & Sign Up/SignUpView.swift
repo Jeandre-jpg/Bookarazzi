@@ -36,6 +36,8 @@ struct SignUpView: View {
     
     @AppStorage("userId") var userId: String = ""
     
+    //userId set in die AppStorage wanneer n user opsign... Save ook die username 
+    
     
     func errorCheck() -> String? {
         if signUpUserVal.trimmingCharacters(in: .whitespaces).isEmpty || signUpEmailVal.trimmingCharacters(in: .whitespaces).isEmpty || signUpPasswordVal.trimmingCharacters(in: .whitespaces).isEmpty {

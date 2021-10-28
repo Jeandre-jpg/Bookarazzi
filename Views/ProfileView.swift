@@ -12,6 +12,9 @@ struct ProfileView: View {
     
     @State var pickedImage: UIImage?
     @State var displayImage: Image?
+    @State var user: User
+    
+    @AppStorage("userId") var userId: String = ""
     
     @State var showingImagePicker = false
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
@@ -43,7 +46,7 @@ struct ProfileView: View {
                     Spacer()
                             VStack(alignment: .center) {
                                 VStack{
-                                   Image("placeholder")
+                                   Image("person.fill")
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio( contentMode: .fill)
@@ -55,7 +58,7 @@ struct ProfileView: View {
                                 
                         VStack(alignment: .center) {
                    
-                            Text("JohnTheBoss")
+                            Text(user.userName)
                                 .font(.custom("Roboto-Black", size: 30))
                                 .lineLimit(nil)
                                 .padding(.top, 10)
@@ -183,8 +186,14 @@ struct ProfileView: View {
         
       
         }
+            
        
         .animation(.easeOut)
+        .onAppear(perform: {
+            FirestoreService.fetchUser(uid: userId, onSuccess: {user in
+                self.user = user
+            })
+        })
        
     }
 }
@@ -193,7 +202,7 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(user: User(userName: "", email: "", posts: [], followers: 0, following: 0, bio: "", imageUrl: ""))
     }
 }
 

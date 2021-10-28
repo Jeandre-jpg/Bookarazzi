@@ -11,12 +11,17 @@ struct LogoView: View {
     
     @State var isAnimating = false
     @State var logo = 1
+    @AppStorage("userId") var userId: String = ""
     
     @State var isActive:Bool = false
     var body: some View {
         VStack{
             if self.isActive {
-                SplashView()
+                if userId == "" {
+                    SplashView()
+                } else {
+                    HomeView()
+                }
             } else {
                 
                                  ZStack {

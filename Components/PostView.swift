@@ -85,7 +85,7 @@ struct PostView: View {
                     .font(.custom("Montserrat-Thin", size: 15))
                     .foregroundColor(Color.ui.black)
                 
-                
+                //NavigationLink( navigate ProfileView(User)
             }
             
         }

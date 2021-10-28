@@ -23,6 +23,7 @@ class StorageService {
  
     static func savePost (caption: String, image: UIImage, onSuccess: @escaping()->Void, onError: @escaping(_ errorMessage: String)->Void){
         
+        //Waar jy post create, kry die username van UserDefaults en save dit saam met die post in firestore (soos ons gedoen het met die userId in klas)
      
         let fileName = storagePost.child(Date().description)
         
