@@ -14,8 +14,21 @@ struct SignUpView: View {
     @State private var signUpEmailVal = "Email"
     @State private var signUpPasswordVal = "Password"
     @State private var signUpUserVal = "Username"
+    @State var pickedImage: UIImage?
+    @State var displayImage: Image?
+    
+    @State var showingActionSheet = false
     
     @State var isLoading: Bool = true
+    
+    @State var showingImagePicker = false
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+        
+    func loadImage() {
+        guard let inputImage = pickedImage else { return }
+        pickedImage = inputImage
+        displayImage = Image(uiImage: inputImage)
+    }
     
     @State private var errorMessage: String = ""
     @State private var showingAlert = false
@@ -44,6 +57,8 @@ struct SignUpView: View {
             return
         }
         
+        @State var showingActionSheet = false
+        
         AuthService.signUp(username: signUpUserVal, email: signUpEmailVal, password: signUpPasswordVal, onSuccess: {(uid) in
             print(uid)
 //            self.clear()
@@ -61,16 +76,27 @@ struct SignUpView: View {
     
     var body: some View {
         
+        NavigationView {
         ZStack{
-//            Color(redColour)
-//                .ignoresSafeArea()
-    VStack{
-        VStack(alignment: .center, spacing: 40){
+            BackgroundImage2()
+                .edgesIgnoringSafeArea(.all)
+            VStack(alignment: .center){
+       
+                VStack(spacing:0) {
+                                       Image("placeholder")
+                                           .renderingMode(.original)
+                                           .resizable()
+                                           .aspectRatio( contentMode: .fill)
+                                           .frame(width: .infinity, height: 200, alignment: .trailing)
+                                                   .onTapGesture(perform: {
+                                                       self.showingActionSheet = true
+                                                   })
        
     Text("Sign Up")
         .frame(maxWidth: .infinity, alignment: .center)
         .font(.custom("Roboto-Condensed", size: 48))
-        .multilineTextAlignment(.leading)
+        .multilineTextAlignment(.center)
+ 
             
             Image("book (1)")
                 .renderingMode(.template)
@@ -82,9 +108,10 @@ struct SignUpView: View {
         Text("Get Your Profile Ready")
             .font(.custom("Montserrat-Thin", size: 25))
             .frame(maxWidth: .infinity, alignment: .center)
-            .multilineTextAlignment(.leading)
-    }
-        .padding()
+            .multilineTextAlignment(.center)
+        
+      
+       
             
             HStack {
                 Image(systemName: "person")
@@ -160,7 +187,7 @@ struct SignUpView: View {
                     }
                 
     }
-    .padding()
+  
     .opacity(isLoading ? 0 : 1)
     .animation(.easeIn.delay(0.8))
     .onAppear(perform: {
@@ -171,10 +198,40 @@ struct SignUpView: View {
         }
 
         }
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage){
+            ImagePicker(pickedImage: $pickedImage)
+        }.actionSheet(isPresented: $showingActionSheet){
+            ActionSheet(title: Text(""), buttons: [
+                .default(Text("Upload an Image")){
+                    self.showingImagePicker = true
+                    self.sourceType = .photoLibrary
+                },
+                .default(Text("Take a Picture")){
+                    self.showingImagePicker = true
+                    self.sourceType = .camera
+                },
+                .cancel()
+            ])
+        }
     }
     
+}
+}
+
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
+    }
+}
+
+
+struct BackgroundImage2 : View {
+    
+    var body: some View {
+        Image("Wallpaper2")
+            .resizable()
+            .frame(width: .infinity, height: .infinity)
+            .aspectRatio(contentMode: .fill)
+            .edgesIgnoringSafeArea(.all)
     }
 }

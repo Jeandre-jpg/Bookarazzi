@@ -13,7 +13,8 @@ struct ProfileView: View {
         
         ZStack {
             
-            Color.ui.beige.edgesIgnoringSafeArea(
+            BackgroundImage3()
+                .edgesIgnoringSafeArea(
                 .all)
             VStack(alignment: .leading, spacing: 10) {
           
@@ -147,14 +148,11 @@ struct ProfileView: View {
                        
             }
             }
-            .background(Color.ui.beige
-                            .ignoresSafeArea(.all))
            
         
       
         }
-        .background(Color.ui.beige
-                        .ignoresSafeArea(.all))
+       
         .animation(.easeOut)
        
     }
@@ -251,4 +249,15 @@ func cell5(image: Image) -> some View {
       
     }
 
+}
+
+struct BackgroundImage3 : View {
+    
+    var body: some View {
+        Image("Wallpaper3")
+            .resizable()
+            .frame(width: .infinity, height: .infinity)
+            .aspectRatio(contentMode: .fill)
+            .edgesIgnoringSafeArea(.all)
+    }
 }

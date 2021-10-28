@@ -2,37 +2,31 @@
 //  HomeView.swift
 //  Bookarazzi
 //
-//  Created by Jeandré De Villiers on 2021/10/21.
+//  Created by Jeandré De Villiers on 2021/10/28.
 //
+
 
 import SwiftUI
 
+
 struct HomeView: View {
+    @State var optionSelected = 0
+
     var body: some View {
         
-        TabView {
+        VStack {
+            if self.optionSelected == 0 {
+                SocialFeedView()
+            } else {
+                ProfileView()
+            }
+            Spacer()
+            TabBarView(optionSelected: self.$optionSelected)
             
-            SocialFeedView()
-                .tabItem({
-                    Image(systemName: "house.fill")
-                    
-                })
-            
-            NewPostView()
-                .tabItem({
-                    Image(systemName: "plus.rectangle.fill")
-                })
-            
-            ProfileView()
-                .tabItem({
-                    Image(systemName: "person.fill")
-                })
-            
-        }
-        .accentColor(Color.ui.orange)
-        
+        }.background(Color.ui.beige).edgesIgnoringSafeArea(.all)
     }
 }
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

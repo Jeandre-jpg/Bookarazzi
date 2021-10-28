@@ -20,7 +20,7 @@ struct LogoView: View {
             } else {
                 
                                  ZStack {
-                                     Color.ui.beige.edgesIgnoringSafeArea(
+                                     BackgroundImage().edgesIgnoringSafeArea(
                                          .all)
                                      VStack(alignment: .center, spacing: 40){
                                        

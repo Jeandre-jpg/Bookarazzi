@@ -14,7 +14,7 @@ struct SplashView: View {
     var body: some View {
         NavigationView {
         ZStack{
-            Color.ui.beige
+            BackgroundImage2()
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 50){
                 Image("\(logo)")
@@ -43,14 +43,21 @@ struct SplashView: View {
                         .border(Color.ui.grey, width: 2, cornerRadius:25)
                       }
                 
-                NavigationLink(destination: OnboardingView()){
+                NavigationLink(destination: OnboardingView(), label:{
                         Text("Don't already have an Account?")
                         .font(.custom("Montserrat-Thin", size: 20))
                         .foregroundColor(Color.ui.black)
                         .multilineTextAlignment(.leading)
-                        .frame(width: 350, height: 100.0)
         
-                  }
+                  })
+                
+                NavigationLink (
+                    destination: OnboardingView(),
+                    label: {
+                            Text("Register")
+                            .foregroundColor(Color.ui.black)
+                                .font(.custom("Montserrat-Medium", size: 15))
+                        })
             }
         }
     }

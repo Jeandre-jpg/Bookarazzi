@@ -15,7 +15,7 @@ struct ButtonView: View {
 //        Button(action: {
 //            print("Exit Onboarding")
 //            isOnboarding = false
-            NavigationLink(destination: AuthScreenView()){
+            NavigationLink(destination: LoginView()){
                 Text(" Skip ")
                     .font(.custom("Montserrat_Thin", size: 20))
                 Image(systemName: "arrow.right.circle")

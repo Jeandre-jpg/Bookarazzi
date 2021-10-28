@@ -16,20 +16,19 @@ struct SocialFeedView: View {
         NavigationView{
         ZStack {
             
-            Color.ui.beige.edgesIgnoringSafeArea(
-                       .all)
+                
                    VStack(alignment: .center) {
                        
-                       
+                       VStack(alignment: .center, spacing: -20){
                  
 
                 Text("Social Feed")
                     .font(.custom("Roboto-Condensed", size: 30))
-                    .padding(.top, -50)
+                    .padding(.top, -100)
                     .foregroundColor(Color.ui.black)
                     .frame(width: 300, height: 25, alignment: .center)
              
-                 
+                      
                 NavigationView{
                    ScrollView(showsIndicators: false){
                        
@@ -44,6 +43,7 @@ struct SocialFeedView: View {
                        }
                        
                     }
+                    
                    .navigationBarItems(leading: Text("Feed"), trailing: NavigationLink(
                     destination: NewPostView(),
                     label: {
@@ -52,6 +52,7 @@ struct SocialFeedView: View {
                             .renderingMode(.original)
                             .frame(width: 40, height: 40, alignment: .center)
                     }))
+                    
             }.background( Color.ui.beige.edgesIgnoringSafeArea(
                 .all))
                 .accentColor(Color.ui.orange)
@@ -60,12 +61,17 @@ struct SocialFeedView: View {
                     viewModel.fetchAllPost()
                 })
                
-                }
+                       }.background( Color.ui.beige.edgesIgnoringSafeArea(
+                    .all))
+                    .accentColor(Color.ui.orange)
+                    .font(.custom("Montserrat-Thin", size: 25))
                   
             }
 
        
         .animation(.easeOut)
+        }
+        
     }
 }
 }
