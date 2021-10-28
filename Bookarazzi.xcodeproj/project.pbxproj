@@ -14,7 +14,6 @@
 		3C4253B9272A891300ADBA8B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4253B8272A891300ADBA8B /* TabBarView.swift */; };
 		3C4253BB272A895D00ADBA8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4253BA272A895C00ADBA8B /* HomeView.swift */; };
 		3C4253BD272A8D9700ADBA8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4253BC272A8D9700ADBA8B /* CustomButton.swift */; };
-		3C4253BF272AA10500ADBA8B /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4253BE272AA10500ADBA8B /* FormField.swift */; };
 		3C5118DE270E511A006398FB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5118DD270E511A006398FB /* ImagePicker.swift */; };
 		3C62366926F3524300FA9D5B /* BookarazziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366826F3524300FA9D5B /* BookarazziApp.swift */; };
 		3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C62366A26F3524300FA9D5B /* ContentView.swift */; };
@@ -53,7 +52,6 @@
 		3C4253B8272A891300ADBA8B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3C4253BA272A895C00ADBA8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3C4253BC272A8D9700ADBA8B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		3C4253BE272AA10500ADBA8B /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		3C5118DD270E511A006398FB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3C62366526F3524300FA9D5B /* Bookarazzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookarazzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62366826F3524300FA9D5B /* BookarazziApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarazziApp.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				3C7C9EFF270F286E009A6876 /* ButtonView.swift */,
 				3C81CD1127184FB50068E54F /* SideBar.swift */,
 				3C4253BC272A8D9700ADBA8B /* CustomButton.swift */,
-				3C4253BE272AA10500ADBA8B /* FormField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -381,7 +378,6 @@
 				3C5118DE270E511A006398FB /* ImagePicker.swift in Sources */,
 				3CDE356F2704911400AB0D3E /* UserView.swift in Sources */,
 				3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */,
-				3C4253BF272AA10500ADBA8B /* FormField.swift in Sources */,
 				3CDE35742704919500AB0D3E /* SignUpView.swift in Sources */,
 				3C4253B9272A891300ADBA8B /* TabBarView.swift in Sources */,
 				3CC344452705ECB900DF8CF0 /* AuthService.swift in Sources */,

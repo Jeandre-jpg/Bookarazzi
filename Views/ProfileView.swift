@@ -9,6 +9,21 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var showingMenu = false
+    
+    @State var pickedImage: UIImage?
+    @State var displayImage: Image?
+    
+    @State var showingImagePicker = false
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+        
+    func loadImage() {
+        guard let inputImage = pickedImage else { return }
+        pickedImage = inputImage
+        displayImage = Image(uiImage: inputImage)
+    }
+    
+    @State var showingActionSheet = false
+    
     var body: some View {
         
         ZStack {
@@ -28,15 +43,16 @@ struct ProfileView: View {
                     Spacer()
                             VStack(alignment: .center) {
                                 VStack{
-                                    Image("user_1")
+                                   Image("placeholder")
+                                    .renderingMode(.original)
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 350, height: 350, alignment: .center)
-                                    .accessibility(hidden: true)
-                                    .cornerRadius(20.0)
-                                  
-                                }
+                                    .aspectRatio( contentMode: .fill)
+                                    .frame(width: .infinity, height: 200, alignment: .trailing)
+                                    .onTapGesture(perform: {
+                                        self.showingActionSheet = true
+                                    })
                             }
+                                
                         VStack(alignment: .center) {
                    
                             Text("JohnTheBoss")
@@ -147,6 +163,21 @@ struct ProfileView: View {
                                       }
                        
             }
+                            .sheet(isPresented: $showingImagePicker, onDismiss: loadImage){
+                                ImagePicker(pickedImage: $pickedImage)
+                            }.actionSheet(isPresented: $showingActionSheet){
+                                ActionSheet(title: Text(""), buttons: [
+                                    .default(Text("Upload an Image")){
+                                        self.showingImagePicker = true
+                                        self.sourceType = .photoLibrary
+                                    },
+                                    .default(Text("Take a Picture")){
+                                        self.showingImagePicker = true
+                                        self.sourceType = .camera
+                                    },
+                                    .cancel()
+                                ])
+                            }
             }
            
         
@@ -157,7 +188,7 @@ struct ProfileView: View {
        
     }
 }
-
+}
 
 
 struct ProfileView_Previews: PreviewProvider {

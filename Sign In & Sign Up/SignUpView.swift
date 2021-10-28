@@ -75,42 +75,37 @@ struct SignUpView: View {
     @State var logingAnimating = true
     
     var body: some View {
-        
         NavigationView {
-        ZStack{
-            BackgroundImage2()
-                .edgesIgnoringSafeArea(.all)
-            VStack(alignment: .center){
-       
-                VStack(spacing:0) {
-                                       Image("placeholder")
-                                           .renderingMode(.original)
-                                           .resizable()
-                                           .aspectRatio( contentMode: .fill)
-                                           .frame(width: .infinity, height: 200, alignment: .trailing)
-                                                   .onTapGesture(perform: {
-                                                       self.showingActionSheet = true
-                                                   })
-       
-    Text("Sign Up")
-        .frame(maxWidth: .infinity, alignment: .center)
-        .font(.custom("Roboto-Condensed", size: 48))
-        .multilineTextAlignment(.center)
- 
-            
-            Image("book (1)")
-                .renderingMode(.template)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 150, height: 150, alignment: .center)
-                .accessibility(hidden: true)
-        
-        Text("Get Your Profile Ready")
-            .font(.custom("Montserrat-Thin", size: 25))
-            .frame(maxWidth: .infinity, alignment: .center)
-            .multilineTextAlignment(.center)
-        
-      
+            ZStack {
+                BackgroundImage2()
+                    .edgesIgnoringSafeArea(.all)
+                VStack(alignment: .center){
+                    
+                    Text("Sign Up")
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .font(.custom("Roboto-Condensed", size: 48))
+                        .multilineTextAlignment(.leading)
+                
+                Image("book (1)")
+                  .renderingMode(.template)
+                  .resizable()
+                  .aspectRatio(contentMode: .fill)
+                  .frame(width: 150, height: 150, alignment: .center)
+                  .accessibility(hidden: true)
+                
+                Text("Welcome To Bookarazzi")
+                   .font(.custom("Montserrat-Thin", size: 25))
+                   .frame(maxWidth: .infinity, alignment: .center)
+                   .multilineTextAlignment(.leading)
+                
+                Text("Please create your account")
+                    .foregroundColor(Color("Blue"))
+                    .font(Font.custom("Lato", size: 15))
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+                
+                VStack {
        
             
             HStack {
@@ -214,9 +209,10 @@ struct SignUpView: View {
             ])
         }
     }
-    
+    }
+
 }
-}
+
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {

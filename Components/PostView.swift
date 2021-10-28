@@ -36,7 +36,7 @@ struct PostView: View {
         VStack(alignment: .leading, spacing: 30){
             HStack{
                 
-                Text(post.ownerId)
+                Text(post.userName)
                     .font(.custom("Roboto-Condensed", size: 30))
                     .foregroundColor(Color.ui.black)
                 
@@ -97,7 +97,7 @@ struct PostView: View {
 }
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(post: Post(postId: "1", caption: "Apparently, I’m Reading Too Much", ownerId: "BookLover911", likeCount: 42, date: 0, imageUrl: "https://confessionsofabookgeek.files.wordpress.com/2014/09/so-many-books-gif.gif"))
+        PostView(post: Post(postId: "1", caption: "Apparently, I’m Reading Too Much", imageUrl:"https://confessionsofabookgeek.files.wordpress.com/2014/09/so-many-books-gif.gif", userName: "BookLover911", likeCount: 42, date: 0))
             .previewLayout(.sizeThatFits)
     }
 }
