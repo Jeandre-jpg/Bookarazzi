@@ -89,9 +89,6 @@ In this project I created a new and exciting social media platform using Xcode, 
       <a href="#development-process">Development Process</a>
       <ul>
           <li><a href="#user-flow-diagram">User-Flow Diagram</a></li>
-        <li><a href="#implementation">Implementation of Features</a></li>
-          <li><a href="#design-architecture">Design Architecture</a></li>
-        <li><a href="#unit-tests">Unit Tests</a></li>
       </ul>
     </li>
     <li><a href="#video-demonstration">Video Demonstration</a></li>
@@ -237,6 +234,23 @@ Then run `swift build` whenever you get prepared.
 
 ### Mockups
 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/55391556/139404702-6084f772-4652-4f40-8b59-b88a87730fe3.jpg"/> 
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/55391556/139404981-43de259d-7646-418f-b3f9-3066e843837e.jpg"/> 
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/55391556/139405073-87552217-8f1e-4dd2-8382-fe3922c7a44e.jpg"/> 
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/55391556/139405173-04f3e3ad-680e-4654-a386-790db4f9a7f8.jpg"/> 
+</p>
+
+
 
 ## Concept Process
 
@@ -263,14 +277,6 @@ Then run `swift build` whenever you get prepared.
  <img src="https://user-images.githubusercontent.com/55391556/133997905-62f9836f-8fa8-45e4-8200-a84ee0bf69c0.jpeg"/> 
 </p>
    
-
-### Implementation
-
-## Design Architecture
-
-
-
-## Unit Tests
 
 ## Video Demonstration
 
@@ -325,7 +331,7 @@ Contributions are what make the open source community such an amazing place to b
 I'm currently Studying Interaction Design and Interactive Development.
 
 #### Interests Include:
-Gorillaz, Gaming and Art, UI and UX design, Anything that's in pixelated art style, App and Web Development
+Gorillaz, Gaming and Art, UI and UX design, Anything that's in pixelated art style, App and Web Development and Design.
 
 #### My Goals are:
 Successful web designer and developer.
@@ -348,4 +354,17 @@ Project Link: [https://github.com/Jeandre-jpg/Bookarazzi.git](https://github.com
 
 
 ## Acknowledgements
-
+1. https://stackoverflow.com/questions/59005162/tabview-tabitem-image-move-to-top
+2. https://github.com/BLCKBIRDS/CustomTabBarInSwiftUI
+3. https://stackoverflow.com/questions/63028813/cant-change-the-ios14-widget-background-color
+4. https://github.com/SDWebImage/SDWebImageSwiftUI
+5. https://peterfriese.dev/replicating-reminder-swiftui-firebase-part2/
+6. https://www.hackingwithswift.com/plus/ultimate-portfolio-app/creating-a-simple-widget
+7. https://swiftwithmajid.com/2020/09/09/building-widgets-in-swiftui/
+8. https://github.com/muhammedtanriverdi/Photo-Widget-Sample/blob/master/Photo-Widget-Extension%24/Photo_Widget_Extension_.swift
+9. https://stackoverflow.com/questions/62613642/how-to-fetch-user-data-from-cloud-firestore
+10. https://medium.com/@ivanchemical/swift-ui-social-network-c27a67078d62
+11. https://github.com/ifgs1/SocialNetwork
+12. https://www.reddit.com/r/SwiftUI/comments/hpbx40/i_want_to_learn_how_to_build_a_social_networking/
+13. https://github.com/AnderGoig/SwiftInstagram
+14. https://github.com/TheM4hd1/SwiftyInsta
