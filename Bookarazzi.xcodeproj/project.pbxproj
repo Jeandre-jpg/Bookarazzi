@@ -29,6 +29,13 @@
 		3CC344452705ECB900DF8CF0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344442705ECB900DF8CF0 /* AuthService.swift */; };
 		3CC344472705ED2800DF8CF0 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344462705ED2800DF8CF0 /* FirestoreService.swift */; };
 		3CC344492705EDB200DF8CF0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC344482705EDB200DF8CF0 /* StorageService.swift */; };
+		3CCFD0D3272BB01D00835D75 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCFD0D2272BB01D00835D75 /* WidgetKit.framework */; };
+		3CCFD0D5272BB01D00835D75 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCFD0D4272BB01D00835D75 /* SwiftUI.framework */; };
+		3CCFD0D8272BB01D00835D75 /* BookarazziQuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFD0D7272BB01D00835D75 /* BookarazziQuickLook.swift */; };
+		3CCFD0DB272BB02000835D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCFD0DA272BB02000835D75 /* Assets.xcassets */; };
+		3CCFD0DD272BB02000835D75 /* BookarazziQuickLook.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFD0D9272BB01D00835D75 /* BookarazziQuickLook.intentdefinition */; };
+		3CCFD0DE272BB02000835D75 /* BookarazziQuickLook.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFD0D9272BB01D00835D75 /* BookarazziQuickLook.intentdefinition */; };
+		3CCFD0E1272BB02000835D75 /* BookarazziQuickLookExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CCFD0D1272BB01D00835D75 /* BookarazziQuickLookExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CDE356B2704909D00AB0D3E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE356A2704909D00AB0D3E /* ProfileView.swift */; };
 		3CDE356D270490D400AB0D3E /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE356C270490D400AB0D3E /* NewPostView.swift */; };
 		3CDE356F2704911400AB0D3E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE356E2704911400AB0D3E /* UserView.swift */; };
@@ -42,6 +49,30 @@
 		3CE21B872704BBEE0013C65F /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE21B832704BBEE0013C65F /* Montserrat-Thin.ttf */; };
 		3CE21B882704BBEE0013C65F /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE21B842704BBEE0013C65F /* Montserrat-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CCFD0DF272BB02000835D75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C62365D26F3524300FA9D5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CCFD0D0272BB01D00835D75;
+			remoteInfo = BookarazziQuickLookExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CCFD0E2272BB02000835D75 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3CCFD0E1272BB02000835D75 /* BookarazziQuickLookExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookarazzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +99,13 @@
 		3CC344442705ECB900DF8CF0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3CC344462705ED2800DF8CF0 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		3CC344482705EDB200DF8CF0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		3CCFD0D1272BB01D00835D75 /* BookarazziQuickLookExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BookarazziQuickLookExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CCFD0D2272BB01D00835D75 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3CCFD0D4272BB01D00835D75 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3CCFD0D7272BB01D00835D75 /* BookarazziQuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookarazziQuickLook.swift; sourceTree = "<group>"; };
+		3CCFD0D9272BB01D00835D75 /* BookarazziQuickLook.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BookarazziQuickLook.intentdefinition; sourceTree = "<group>"; };
+		3CCFD0DA272BB02000835D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CCFD0DC272BB02000835D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDE356A2704909D00AB0D3E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3CDE356C270490D400AB0D3E /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		3CDE356E2704911400AB0D3E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -90,6 +128,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2400526099364CB4C406B3B1 /* Pods_Bookarazzi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CCFD0CE272BB01D00835D75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCFD0D5272BB01D00835D75 /* SwiftUI.framework in Frameworks */,
+				3CCFD0D3272BB01D00835D75 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +176,7 @@
 				3CDE35702704915100AB0D3E /* Sign In & Sign Up */,
 				3C2765D62703A3130075F51C /* Views */,
 				3C62366726F3524300FA9D5B /* Bookarazzi */,
+				3CCFD0D6272BB01D00835D75 /* BookarazziQuickLook */,
 				3C62366626F3524300FA9D5B /* Products */,
 				9D6FA95A2638453FC3D2B8AC /* Pods */,
 				7011A4B7D8A6B91035254ABB /* Frameworks */,
@@ -139,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				3C62366526F3524300FA9D5B /* Bookarazzi.app */,
+				3CCFD0D1272BB01D00835D75 /* BookarazziQuickLookExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +244,17 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3CCFD0D6272BB01D00835D75 /* BookarazziQuickLook */ = {
+			isa = PBXGroup;
+			children = (
+				3CCFD0D7272BB01D00835D75 /* BookarazziQuickLook.swift */,
+				3CCFD0D9272BB01D00835D75 /* BookarazziQuickLook.intentdefinition */,
+				3CCFD0DA272BB02000835D75 /* Assets.xcassets */,
+				3CCFD0DC272BB02000835D75 /* Info.plist */,
+			);
+			path = BookarazziQuickLook;
+			sourceTree = "<group>";
+		};
 		3CDE35702704915100AB0D3E /* Sign In & Sign Up */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				093D656EC0AC797CC5074EB6 /* Pods_Bookarazzi.framework */,
+				3CCFD0D2272BB01D00835D75 /* WidgetKit.framework */,
+				3CCFD0D4272BB01D00835D75 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,15 +318,34 @@
 				3C62366226F3524300FA9D5B /* Frameworks */,
 				3C62366326F3524300FA9D5B /* Resources */,
 				F5BADBD2F5D5CB44DE08010E /* [CP] Embed Pods Frameworks */,
+				3CCFD0E2272BB02000835D75 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3CCFD0E0272BB02000835D75 /* PBXTargetDependency */,
 			);
 			name = Bookarazzi;
 			productName = Bookarazzi;
 			productReference = 3C62366526F3524300FA9D5B /* Bookarazzi.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3CCFD0D0272BB01D00835D75 /* BookarazziQuickLookExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CCFD0E5272BB02000835D75 /* Build configuration list for PBXNativeTarget "BookarazziQuickLookExtension" */;
+			buildPhases = (
+				3CCFD0CD272BB01D00835D75 /* Sources */,
+				3CCFD0CE272BB01D00835D75 /* Frameworks */,
+				3CCFD0CF272BB01D00835D75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookarazziQuickLookExtension;
+			productName = BookarazziQuickLookExtension;
+			productReference = 3CCFD0D1272BB01D00835D75 /* BookarazziQuickLookExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -272,11 +353,14 @@
 		3C62365D26F3524300FA9D5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					3C62366426F3524300FA9D5B = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					3CCFD0D0272BB01D00835D75 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
@@ -294,6 +378,7 @@
 			projectRoot = "";
 			targets = (
 				3C62366426F3524300FA9D5B /* Bookarazzi */,
+				3CCFD0D0272BB01D00835D75 /* BookarazziQuickLookExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -312,6 +397,14 @@
 				3CE21B802704AD020013C65F /* Roboto-Condensed.ttf in Resources */,
 				3CE21B872704BBEE0013C65F /* Montserrat-Thin.ttf in Resources */,
 				3CE21B7F2704AD020013C65F /* Roboto-Black.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CCFD0CF272BB01D00835D75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCFD0DB272BB02000835D75 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +466,7 @@
 				3C7C9EFC270F27C2009A6876 /* OnboardingView.swift in Sources */,
 				3C5118DE270E511A006398FB /* ImagePicker.swift in Sources */,
 				3CDE356F2704911400AB0D3E /* UserView.swift in Sources */,
+				3CCFD0DE272BB02000835D75 /* BookarazziQuickLook.intentdefinition in Sources */,
 				3C62366B26F3524300FA9D5B /* ContentView.swift in Sources */,
 				3CDE35742704919500AB0D3E /* SignUpView.swift in Sources */,
 				3C4253B9272A891300ADBA8B /* TabBarView.swift in Sources */,
@@ -391,7 +485,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CCFD0CD272BB01D00835D75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCFD0D8272BB01D00835D75 /* BookarazziQuickLook.swift in Sources */,
+				3CCFD0DD272BB02000835D75 /* BookarazziQuickLook.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CCFD0E0272BB02000835D75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CCFD0D0272BB01D00835D75 /* BookarazziQuickLookExtension */;
+			targetProxy = 3CCFD0DF272BB02000835D75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3C62367226F3524400FA9D5B /* Debug */ = {
@@ -514,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F7644F33BF6AEF79347032FC /* Pods-Bookarazzi.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2E99D2E551EAB7B0A5D4E08 /* Pods-Bookarazzi.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +664,64 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.Bookarazzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CCFD0E3272BB02000835D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9M2VSZXT7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookarazziQuickLook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BookarazziQuickLook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.Bookarazzi.BookarazziQuickLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CCFD0E4272BB02000835D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9M2VSZXT7V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookarazziQuickLook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BookarazziQuickLook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.Bookarazzi.BookarazziQuickLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -573,6 +744,15 @@
 			buildConfigurations = (
 				3C62367526F3524400FA9D5B /* Debug */,
 				3C62367626F3524400FA9D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CCFD0E5272BB02000835D75 /* Build configuration list for PBXNativeTarget "BookarazziQuickLookExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CCFD0E3272BB02000835D75 /* Debug */,
+				3CCFD0E4272BB02000835D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

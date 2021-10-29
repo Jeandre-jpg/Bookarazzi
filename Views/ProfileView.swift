@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     @State private var showingMenu = false
     
-    @ObservedObject var viewModel = FirestoreService()
+//    @ObservedObject var viewModel = FirestoreService()
 //    @State var userId = UserDefaults.standard.value(forKey: "user") as? String ?? ""
     
     @State var pickedImage: UIImage?
@@ -50,14 +50,11 @@ struct ProfileView: View {
                     Spacer()
                             VStack(alignment: .center) {
                                 VStack{
-                                   Image("person.fill")
+                                   Image("user_2")
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio( contentMode: .fill)
                                     .frame(width: .infinity, height: 200, alignment: .trailing)
-                                    .onTapGesture(perform: {
-                                        self.showingActionSheet = true
-                                    })
                             }
                                 
                         VStack(alignment: .center) {
@@ -67,7 +64,7 @@ struct ProfileView: View {
                                 .lineLimit(nil)
                                 .padding(.top, 10)
                             Text("I joined • 16 September 2021")
-                                .font(.custom("AvenirNext-Regular", size: 15))
+                                .font(.custom("Montserrat-Thin", size: 10))
                                 .foregroundColor(.gray)
                                 .padding(.top, 10)
                             
@@ -172,37 +169,37 @@ struct ProfileView: View {
                                            
                            }
                             
-                            NavigationView{
-                               ScrollView(showsIndicators: false){
-
-                                   if viewModel.posts.count < 1 {
-                                       ProgressView()
-                                           .progressViewStyle(CircularProgressViewStyle(tint: Color.ui.orange))
-                                   }else{
-                                       ForEach(viewModel.posts) {post in
-                                           PostView(post: post)
-                                   }
-
-                                   }
-
-                                }
-
-                               .navigationBarItems(leading: Text("Feed"), trailing: NavigationLink(
-                                destination: NewPostView(),
-                                label: {
-                                    Image(systemName: "plus.square.fill.on.square.fill")
-
-                                        .renderingMode(.original)
-                                        .frame(width: 40, height: 40, alignment: .center)
-                                }))
-
-                        }.background( Color.ui.beige.edgesIgnoringSafeArea(
-                            .all))
-                            .accentColor(Color.ui.orange)
-                            .font(.custom("Montserrat-Thin", size: 25))
-                            .onAppear(perform: {
-                                viewModel.fetchPosts()
-                            })
+//                            NavigationView{
+//                               ScrollView(showsIndicators: false){
+//
+//                                   if viewModel.posts.count < 1 {
+//                                       ProgressView()
+//                                           .progressViewStyle(CircularProgressViewStyle(tint: Color.ui.orange))
+//                                   }else{
+//                                       ForEach(viewModel.posts) {post in
+//                                           PostView(post: post)
+//                                   }
+//
+//                                   }
+//
+//                                }
+//
+//                               .navigationBarItems(leading: Text("Feed"), trailing: NavigationLink(
+//                                destination: NewPostView(),
+//                                label: {
+//                                    Image(systemName: "plus.square.fill.on.square.fill")
+//
+//                                        .renderingMode(.original)
+//                                        .frame(width: 40, height: 40, alignment: .center)
+//                                }))
+//
+//                        }.background( Color.ui.beige.edgesIgnoringSafeArea(
+//                            .all))
+//                            .accentColor(Color.ui.orange)
+//                            .font(.custom("Montserrat-Thin", size: 25))
+//                            .onAppear(perform: {
+//                                viewModel.fetchPosts()
+//                            })
                                    
                                 
                                       }
