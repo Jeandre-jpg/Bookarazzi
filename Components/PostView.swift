@@ -33,8 +33,24 @@ struct PostView: View {
     @AppStorage("userId") var userId: String = ""
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 30){
+     
+    
+                    VStack (alignment: .leading, spacing: 30){
+                     
+       
             HStack{
+                
+           
+                    NavigationLink(
+                     destination: PersonView(user: User(userName: "test2", email: "", posts: [], followers: 0, following: 0, bio: "", imageUrl: "")),
+                     label: {
+                         Image(systemName: "person.circle.fill")
+                            
+                             .renderingMode(.original)
+                             .frame(width: 40, height: 40, alignment: .center)
+                     })
+                
+          
                 
                 Text(post.userName)
                     .font(.custom("Roboto-Condensed", size: 30))
@@ -42,11 +58,11 @@ struct PostView: View {
                 
                 Spacer()
                
-                Image(systemName: "highlighter")
-                    .renderingMode(.original)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30, alignment: .center)
+                
+               
+                
+                
+             
             }
             
             
@@ -85,7 +101,8 @@ struct PostView: View {
                     .font(.custom("Montserrat-Thin", size: 15))
                     .foregroundColor(Color.ui.black)
                 
-                //NavigationLink( navigate ProfileView(User)
+               
+                        
             }
             
         }
@@ -93,8 +110,12 @@ struct PostView: View {
         .padding()
         .background(Color.ui.beige
             .ignoresSafeArea(.all))
+            
+
     }
 }
+
+
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         PostView(post: Post(postId: "1", caption: "Apparently, I’m Reading Too Much", imageUrl:"https://confessionsofabookgeek.files.wordpress.com/2014/09/so-many-books-gif.gif", userName: "BookLover911", likeCount: 42, date: 0))

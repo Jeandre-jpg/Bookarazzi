@@ -19,6 +19,8 @@ struct HomeView: View {
                 SocialFeedView()
             } else {
                 ProfileView(user: User(userName: "", email: "", posts: [], followers: 0, following: 0, bio: "", imageUrl: ""))
+                
+               
             }
             Spacer()
             TabBarView(optionSelected: self.$optionSelected)

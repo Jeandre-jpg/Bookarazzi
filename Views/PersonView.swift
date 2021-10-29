@@ -1,24 +1,24 @@
 //
-//  ProfileView.swift
+//  PersonView.swift
 //  Bookarazzi
 //
-//  Created by Jeandré De Villiers on 2021/09/29.
+//  Created by Jeandré De Villiers on 2021/10/29.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
+struct PersonView: View {
     @State private var showingMenu = false
     
 //    @ObservedObject var viewModel = FirestoreService()
-//    @State var userId = UserDefaults.standard.value(forKey: "user") as? String ?? ""
+   @State var userId = UserDefaults.standard.value(forKey: "user") as? String ?? ""
     
     @State var pickedImage: UIImage?
     @State var displayImage: Image?
     @State var user: User
 
     
-    @AppStorage("userId") var userId: String = ""
+
     
     @State var showingImagePicker = false
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
@@ -170,10 +170,41 @@ struct ProfileView: View {
                                       
                                            
                            }
-                                           
-                           }
                             
-                 
+//                            NavigationView{
+//                               ScrollView(showsIndicators: false){
+//
+//                                   if viewModel.posts.count < 1 {
+//                                       ProgressView()
+//                                           .progressViewStyle(CircularProgressViewStyle(tint: Color.ui.orange))
+//                                   }else{
+//                                       ForEach(viewModel.posts) {post in
+//                                           PostView(post: post)
+//                                   }
+//
+//                                   }
+//
+//                                }
+//
+//                               .navigationBarItems(leading: Text("Feed"), trailing: NavigationLink(
+//                                destination: NewPostView(),
+//                                label: {
+//                                    Image(systemName: "plus.square.fill.on.square.fill")
+//
+//                                        .renderingMode(.original)
+//                                        .frame(width: 40, height: 40, alignment: .center)
+//                                }))
+//
+//                        }.background( Color.ui.beige.edgesIgnoringSafeArea(
+//                            .all))
+//                            .accentColor(Color.ui.orange)
+//                            .font(.custom("Montserrat-Thin", size: 25))
+//                            .onAppear(perform: {
+//                                viewModel.fetchPosts()
+//                            })
+                                   
+                                
+                                      }
                        
             }
 
@@ -198,24 +229,15 @@ struct ProfileView: View {
 }
 
 
-struct ProfileView_Previews: PreviewProvider {
+struct PersonView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(user: User(userName: "", email: "", posts: [], followers: 0, following: 0, bio: "", imageUrl: ""))
     }
 }
 
-func cell(image: Image) -> some View {
-    HStack {
-        VStack(alignment: .leading, spacing: 20) {
 
-            Image("logo")
-                 
-        }
-       
-    }
-}
 
-func cell1(image: Image) -> some View {
+func cell6(image: Image) -> some View {
     HStack {
         VStack(alignment: .leading) {
             Image("book_1")
@@ -231,7 +253,7 @@ func cell1(image: Image) -> some View {
 }
 
 
-func cell2(image: Image) -> some View {
+func cell7(image: Image) -> some View {
     HStack {
         VStack(alignment: .leading) {
             Image("book_2")
@@ -247,7 +269,7 @@ func cell2(image: Image) -> some View {
 }
 
 
-func cell3(image: Image) -> some View {
+func cell8(image: Image) -> some View {
     HStack {
         VStack(alignment: .leading) {
             Image("book_3")
@@ -261,7 +283,7 @@ func cell3(image: Image) -> some View {
 }
 
 
-func cell4(image: Image) -> some View {
+func cell9(image: Image) -> some View {
     HStack {
         VStack(alignment: .leading) {
             Image("book_4")
@@ -274,7 +296,7 @@ func cell4(image: Image) -> some View {
        
     }
 }
-func cell5(image: Image) -> some View {
+func cell10(image: Image) -> some View {
     HStack {
         VStack(alignment: .leading) {
             Image("book_5")
@@ -289,13 +311,3 @@ func cell5(image: Image) -> some View {
 
 }
 
-struct BackgroundImage3 : View {
-    
-    var body: some View {
-        Image("Wallpaper3")
-            .resizable()
-            .frame(width: .infinity, height: .infinity)
-            .aspectRatio(contentMode: .fill)
-            .edgesIgnoringSafeArea(.all)
-    }
-}
