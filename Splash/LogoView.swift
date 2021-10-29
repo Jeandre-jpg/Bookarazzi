@@ -23,18 +23,18 @@ struct LogoView: View {
                     HomeView()
                 }
             } else {
-                
                                  ZStack {
                                      BackgroundImage().edgesIgnoringSafeArea(
                                          .all)
-                                     VStack(alignment: .center, spacing: 40){
+                                     VStack(alignment: .center, spacing: 20){
                                        
                                          
                                          Image("\(logo)")
                                              .renderingMode(.template)
                                              .resizable()
                                              .aspectRatio(contentMode: .fill)
-                                             .frame(width: 300, height: 300, alignment: .center)
+                                             .frame(width: 250, height: 250, alignment: .center)
+                                             .padding(.leading, -50)
                                              .accessibility(hidden: true)
                                              
                                              .rotationEffect(Angle(degrees: isAnimating ? 1080 : 0))
@@ -53,6 +53,7 @@ struct LogoView: View {
                                          Text("App Version: 2. 01. 02")
                                              .font(Font.custom("Montserrat-Light", size: 20))
                                              .lineLimit(20)
+                                             .padding(.leading, -50)
                                              .frame(width: 250, height: 50, alignment: .center)
                                              .lineSpacing(20)
                                              .foregroundColor(Color.ui.black)
@@ -61,12 +62,13 @@ struct LogoView: View {
                                          Text("Developed by: Jeandrè De Villiers")
                                              .font(Font.custom("Montserrat-Light", size: 15))
                                              .lineLimit(20)
+                                             .padding(.leading, -50)
                                              .frame(width: 250, height: 50, alignment: .center)
                                              .lineSpacing(20)
                                              .foregroundColor(Color.ui.black)
                                          
                                          
-                                     }.frame(width: 150, height: 150)
+                                     }.frame(width: 150, height: 150, alignment: .center)
                                          .onAppear(){
                                              Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) {_ in
                                                  self.logo = Int.random(in: 0...1)
@@ -77,7 +79,7 @@ struct LogoView: View {
    
                        
                             }
-                    .edgesIgnoringSafeArea(.vertical)
+                    .edgesIgnoringSafeArea(.all)
                     .onAppear {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {

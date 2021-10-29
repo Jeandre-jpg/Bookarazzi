@@ -10,9 +10,13 @@ import SwiftUI
 struct ProfileView: View {
     @State private var showingMenu = false
     
+    @ObservedObject var viewModel = FirestoreService()
+//    @State var userId = UserDefaults.standard.value(forKey: "user") as? String ?? ""
+    
     @State var pickedImage: UIImage?
     @State var displayImage: Image?
     @State var user: User
+
     
     @AppStorage("userId") var userId: String = ""
     
@@ -67,6 +71,12 @@ struct ProfileView: View {
                                 .foregroundColor(.gray)
                                 .padding(.top, 10)
                             
+                            Text(user.email)
+                                .font(.custom("Roboto-Black", size: 30))
+                                .lineLimit(nil)
+                                .padding(.top, 10)
+
+                            
                             Divider()
                             
                             HStack{
@@ -77,7 +87,7 @@ struct ProfileView: View {
                                 .padding(.top, 10)
                                     
                                     Text("Posts Made")
-                                        .font(.custom("AvenirNext-Regular", size: 10))
+                                        .font(.custom("Montserrat-Thin", size: 10))
                                         .foregroundColor(.gray)
                                         .padding(.top, 10)
                                 }.padding(20)
@@ -91,7 +101,7 @@ struct ProfileView: View {
                                     .padding(.top, 10)
                                     
                                     Text("Posts Liked")
-                                        .font(.custom("AvenirNext-Regular", size: 10))
+                                        .font(.custom("Montserrat-Thin", size: 10))
                                         .foregroundColor(.gray)
                                         .padding(.top, 10)
                                 }.padding(20)
@@ -105,7 +115,7 @@ struct ProfileView: View {
                                     .padding(.top, 10)
                                     
                                     Text("Posts Saved")
-                                        .font(.custom("AvenirNext-Regular", size: 10))
+                                        .font(.custom("Montserrat-Thin", size: 10))
                                         .foregroundColor(.gray)
                                         .padding(.top, 10)
                                 }.padding(20)
@@ -161,39 +171,59 @@ struct ProfileView: View {
                                       
                                            
                            }
+                            
+                            NavigationView{
+                               ScrollView(showsIndicators: false){
+
+                                   if viewModel.posts.count < 1 {
+                                       ProgressView()
+                                           .progressViewStyle(CircularProgressViewStyle(tint: Color.ui.orange))
+                                   }else{
+                                       ForEach(viewModel.posts) {post in
+                                           PostView(post: post)
+                                   }
+
+                                   }
+
+                                }
+
+                               .navigationBarItems(leading: Text("Feed"), trailing: NavigationLink(
+                                destination: NewPostView(),
+                                label: {
+                                    Image(systemName: "plus.square.fill.on.square.fill")
+
+                                        .renderingMode(.original)
+                                        .frame(width: 40, height: 40, alignment: .center)
+                                }))
+
+                        }.background( Color.ui.beige.edgesIgnoringSafeArea(
+                            .all))
+                            .accentColor(Color.ui.orange)
+                            .font(.custom("Montserrat-Thin", size: 25))
+                            .onAppear(perform: {
+                                viewModel.fetchPosts()
+                            })
                                    
                                 
                                       }
                        
             }
-                            .sheet(isPresented: $showingImagePicker, onDismiss: loadImage){
-                                ImagePicker(pickedImage: $pickedImage)
-                            }.actionSheet(isPresented: $showingActionSheet){
-                                ActionSheet(title: Text(""), buttons: [
-                                    .default(Text("Upload an Image")){
-                                        self.showingImagePicker = true
-                                        self.sourceType = .photoLibrary
-                                    },
-                                    .default(Text("Take a Picture")){
-                                        self.showingImagePicker = true
-                                        self.sourceType = .camera
-                                    },
-                                    .cancel()
-                                ])
-                            }
+
             }
            
         
       
         }
             
-       
+            
+            .padding(.leading, -50)
         .animation(.easeOut)
         .onAppear(perform: {
             FirestoreService.fetchUser(uid: userId, onSuccess: {user in
                 self.user = user
             })
         })
+        
        
     }
 }

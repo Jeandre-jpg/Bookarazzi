@@ -13,7 +13,6 @@ import FirebaseAuth
 
 class FirestoreService: ObservableObject {
     
-  
     static var db = Firestore.firestore()
     
     static func getUserId(userId: String) -> DocumentReference {
@@ -74,10 +73,35 @@ class FirestoreService: ObservableObject {
                 onSuccess(User(userName: username, email: email, posts: [], followers: 0, following: 0, bio: bio, imageUrl: picture))
             }
         }
+    
 
 
     
-    @Published var posts = [Post]()
+//    func fetchPosts() {
+//        FirestoreService.db.collection("posts").where(userId: userId).getDocuments{
+//            (QuerySnapshot, error) in
+//
+//            if let error = error{
+//                print(error)
+//            }else{
+//                self.posts = QuerySnapshot!.documents.map{ (queryDocument) -> Post in
+//
+//                    let document = queryDocument.data()
+//                    let caption = document["caption"] as? String ?? "No Caption"
+//                    let userName = document["userName"] as? String ?? "No User"
+//                    let imageUrl = document["imageUrl"] as? String ?? ""
+//                    let likeCount = document["likeCount"] as? Int ?? 0
+//                    let date = document["date"] as? Double ?? 0
+//
+//                    return Post(postId: queryDocument.documentID, caption: caption, imageUrl: imageUrl, userName: userName, likeCount: likeCount, date: date)
+//
+//                }
+//            }
+//        }
+//    }
+    
+    @Published var posts: [Post] = []
+ 
     
     func fetchAllPost() {
         FirestoreService.db.collection("posts").getDocuments{
@@ -102,4 +126,35 @@ class FirestoreService: ObservableObject {
         }
     }
     
-}
+
+                        
+                           let db = Firestore.firestore()
+                           
+                           init(){
+                               fetchPosts()
+                           }
+                        
+                        
+                        
+                        func fetchPosts(){
+                                db.collection("posts").addSnapshotListener{(snap, err) in
+                                    guard let docs = snap else {return}
+
+                                    docs.documentChanges.forEach{(doc) in
+                                        if doc.type == .added{
+                                            let caption = doc.document.data()["caption"] as? String ?? "No Caption"
+                                            let userName = doc.document.data()["userName"] as? String ?? "User"
+                                            let likeCount = doc.document.data()["likeCount"] as? Int ?? 0
+                                            let ownerRef = doc.document.data()["ownerId"] as! String
+                                            let imageUrl = doc.document.data()["imageUrl"] as? String ?? ""
+                                            let date = doc.document.data()["date"]  as? Double ?? 0
+
+
+                                            FirestoreService.fetchUser(uid: ownerRef){(user) in
+                                                self.posts.append(Post(postId: doc.document.documentID, caption: caption, imageUrl: imageUrl, userName: userName, likeCount: likeCount, date: date))
+                                            }
+                                        }
+                                    }
+                                }
+                        }
+                    }
