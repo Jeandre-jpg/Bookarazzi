@@ -195,21 +195,7 @@ struct SignUpView: View {
         }
 
         }
-        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage){
-            ImagePicker(pickedImage: $pickedImage)
-        }.actionSheet(isPresented: $showingActionSheet){
-            ActionSheet(title: Text(""), buttons: [
-                .default(Text("Upload an Image")){
-                    self.showingImagePicker = true
-                    self.sourceType = .photoLibrary
-                },
-                .default(Text("Take a Picture")){
-                    self.showingImagePicker = true
-                    self.sourceType = .camera
-                },
-                .cancel()
-            ])
-        }
+            .padding(.top, -100)
     }
     }
 

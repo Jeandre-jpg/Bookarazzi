@@ -141,6 +141,7 @@ struct NewPostView: View {
                 ])
             }
             }
+            .padding(.top, -150)
             
         }
         

@@ -50,11 +50,13 @@ struct ProfileView: View {
                     Spacer()
                             VStack(alignment: .center) {
                                 VStack{
-                                   Image("user_2")
+                                   Image("user_icon")
                                     .renderingMode(.original)
                                     .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(20.0)
                                     .aspectRatio( contentMode: .fill)
-                                    .frame(width: .infinity, height: 200, alignment: .trailing)
+                                    .frame(width: 250, height: 150, alignment: .center)
                             }
                                 
                         VStack(alignment: .center) {
@@ -63,13 +65,13 @@ struct ProfileView: View {
                                 .font(.custom("Roboto-Black", size: 30))
                                 .lineLimit(nil)
                                 .padding(.top, 10)
-                            Text("I joined • 16 September 2021")
+                            Text("I joined • 29 October 2021")
                                 .font(.custom("Montserrat-Thin", size: 10))
                                 .foregroundColor(.gray)
                                 .padding(.top, 10)
                             
                             Text(user.email)
-                                .font(.custom("Roboto-Black", size: 30))
+                                .font(.custom("Roboto-Black", size: 20))
                                 .lineLimit(nil)
                                 .padding(.top, 10)
 
